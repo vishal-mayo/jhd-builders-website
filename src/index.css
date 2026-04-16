@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply font-sans bg-dark text-white antialiased; }
+}
+
+@layer components {
+  .btn-primary { @apply bg-primary text-white px-8 py-4 font-semibold transition-all duration-300 hover:bg-primary-dark; }
+  .section-padding { @apply py-20 px-4 sm:px-6 lg:px-8; }
+  .container-custom { @apply max-w-7xl mx-auto; }
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #212326; }
+::-webkit-scrollbar-thumb { background: #6db44c; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #5a9a3f; }
