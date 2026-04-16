@@ -15,17 +15,18 @@ function Home() {
 
   return (
     <>
-      {/* Hero Section with Video Background */}
+      {/* Hero Section with Vimeo Video Background */}
       <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
-        {/* Background Image/Video */}
+        {/* Vimeo Video Background */}
         <div className="absolute inset-0 z-0">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{
-              backgroundImage: 'url(/images/hero-bg.jpg)',
-            }}
+          <iframe
+            src="https://player.vimeo.com/video/945934477?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+            className="absolute w-[150%] h-[150%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            allowFullScreen
           />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
 
         {/* Hero Content */}
@@ -55,24 +56,60 @@ function Home() {
               Commercial & Property Building Specialist
             </motion.h1>
 
-            {/* CTA Buttons */}
+            {/* CTA Buttons with Cool Hover Animations */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-col sm:flex-row gap-6 justify-center"
             >
+              {/* Primary Button - Slide Effect */}
               <Link
                 to="/contact"
-                className="bg-primary text-white px-8 py-4 font-semibold text-lg hover:bg-primary-dark transition-all duration-300 uppercase tracking-wider"
+                className="group relative overflow-hidden bg-primary text-white px-10 py-4 font-semibold text-lg uppercase tracking-wider transition-all duration-500"
               >
-                Contact Us
+                <span className="relative z-10 flex items-center gap-2">
+                  Contact Us
+                  <svg 
+                    className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+                <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
+                <span className="absolute inset-0 flex items-center justify-center gap-2 text-dark opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                  Contact Us
+                  <svg 
+                    className="w-5 h-5" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
               </Link>
+
+              {/* Secondary Button - Border Fill Effect */}
               <Link
                 to="/services"
-                className="border-2 border-white text-white px-8 py-4 font-semibold text-lg hover:bg-white hover:text-dark transition-all duration-300 uppercase tracking-wider"
+                className="group relative overflow-hidden border-2 border-white text-white px-10 py-4 font-semibold text-lg uppercase tracking-wider transition-all duration-500"
               >
-                Our Services
+                <span className="relative z-10 flex items-center gap-2 group-hover:text-dark transition-colors duration-500">
+                  Our Services
+                  <svg 
+                    className="w-5 h-5 transform group-hover:rotate-45 transition-transform duration-300" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </span>
+                <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left" />
               </Link>
             </motion.div>
           </div>
@@ -258,12 +295,26 @@ function Home() {
           <div className="text-center mt-12">
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 font-semibold hover:bg-primary-dark transition-colors uppercase tracking-wider"
+              className="group relative inline-flex overflow-hidden bg-primary text-white px-10 py-4 font-semibold uppercase tracking-wider transition-all duration-500"
             >
-              View All Services
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              <span className="relative z-10 flex items-center gap-2">
+                View All Services
+                <svg 
+                  className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
+              <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
+              <span className="absolute inset-0 flex items-center justify-center gap-2 text-dark opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                View All Services
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
             </Link>
           </div>
         </div>
@@ -382,12 +433,26 @@ function Home() {
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 font-semibold hover:bg-primary-dark transition-colors uppercase tracking-wider"
+              className="group relative inline-flex overflow-hidden bg-primary text-white px-10 py-4 font-semibold uppercase tracking-wider transition-all duration-500"
             >
-              Get Free Quote
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              <span className="relative z-10 flex items-center gap-2">
+                Get Free Quote
+                <svg 
+                  className="w-5 h-5 transform group-hover:translate-x-1 group-hover:rotate-12 transition-all duration-300" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+              <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
+              <span className="absolute inset-0 flex items-center justify-center gap-2 text-dark opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                Get Free Quote
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
             </Link>
           </motion.div>
         </div>
