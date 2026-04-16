@@ -63,13 +63,15 @@ function Home() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-6 justify-center"
             >
-              {/* Primary Button - Diagonal Slide Up Effect */}
+              {/* Primary Button - Sweep from bottom-left to top-right */}
               <Link
                 to="/contact"
                 className="group relative overflow-hidden bg-primary text-white px-10 py-4 font-semibold text-lg uppercase tracking-wider"
               >
-                {/* Background that slides up */}
-                <span className="absolute inset-0 bg-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
+                {/* Sweep effect using skewed pseudo-element */}
+                <span 
+                  className="absolute inset-0 bg-white transform origin-bottom-left -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"
+                />
                 {/* Text - changes color on hover */}
                 <span className="relative z-10 flex items-center gap-2 group-hover:text-primary transition-colors duration-500">
                   Contact Us
@@ -84,13 +86,15 @@ function Home() {
                 </span>
               </Link>
 
-              {/* Secondary Button - Border with Diagonal Slide */}
+              {/* Secondary Button - Border with Sweep */}
               <Link
                 to="/services"
                 className="group relative overflow-hidden border-2 border-white text-white px-10 py-4 font-semibold text-lg uppercase tracking-wider"
               >
-                {/* Background that slides up */}
-                <span className="absolute inset-0 bg-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
+                {/* Sweep effect using skewed pseudo-element */}
+                <span 
+                  className="absolute inset-0 bg-white transform origin-bottom-left -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"
+                />
                 {/* Text - changes color on hover */}
                 <span className="relative z-10 flex items-center gap-2 group-hover:text-dark transition-colors duration-500">
                   Our Services
@@ -290,7 +294,7 @@ function Home() {
               to="/services"
               className="group relative overflow-hidden bg-primary text-white px-10 py-4 font-semibold uppercase tracking-wider"
             >
-              <span className="absolute inset-0 bg-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
+              <span className="absolute inset-0 bg-white transform origin-bottom-left -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
               <span className="relative z-10 flex items-center gap-2 group-hover:text-primary transition-colors duration-500">
                 View All Services
                 <svg 
@@ -422,7 +426,7 @@ function Home() {
               to="/contact"
               className="group relative overflow-hidden bg-primary text-white px-10 py-4 font-semibold uppercase tracking-wider"
             >
-              <span className="absolute inset-0 bg-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
+              <span className="absolute inset-0 bg-white transform origin-bottom-left -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
               <span className="relative z-10 flex items-center gap-2 group-hover:text-primary transition-colors duration-500">
                 Get Free Quote
                 <svg 
