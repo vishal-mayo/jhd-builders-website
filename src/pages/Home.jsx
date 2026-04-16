@@ -64,45 +64,19 @@ function Home() {
               className="flex flex-col sm:flex-row gap-6 justify-center"
             >
               {/* Primary Button */}
-              <Link
-                to="/contact"
-                className="btn-codepen group relative inline-flex items-center justify-center bg-transparent text-primary px-10 py-4 text-lg uppercase tracking-wider"
-              >
-                <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
-                  <rect x="0" y="0" width="100%" height="100%" />
+              <Link to="/contact" className="btn-codepen">
+                <svg>
+                  <rect x="0" y="0" width="200" height="56" />
                 </svg>
-                <span className="relative z-10 flex items-center gap-2">
-                  Contact Us
-                  <svg 
-                    className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </span>
+                Contact Us
               </Link>
 
               {/* Secondary Button */}
-              <Link
-                to="/services"
-                className="btn-codepen-white group relative inline-flex items-center justify-center bg-transparent text-white px-10 py-4 text-lg uppercase tracking-wider"
-              >
-                <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
-                  <rect x="0" y="0" width="100%" height="100%" />
+              <Link to="/services" className="btn-codepen-white">
+                <svg>
+                  <rect x="0" y="0" width="200" height="56" />
                 </svg>
-                <span className="relative z-10 flex items-center gap-2">
-                  Our Services
-                  <svg 
-                    className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </span>
+                Our Services
               </Link>
             </motion.div>
           </div>
@@ -286,24 +260,11 @@ function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Link
-              to="/services"
-              className="btn-codepen group relative inline-flex items-center justify-center bg-transparent text-primary px-10 py-4 uppercase tracking-wider"
-            >
-              <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
-                <rect x="0" y="0" width="100%" height="100%" />
+            <Link to="/services" className="btn-codepen">
+              <svg>
+                <rect x="0" y="0" width="200" height="56" />
               </svg>
-              <span className="relative z-10 flex items-center gap-2">
-                View All Services
-                <svg 
-                  className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </span>
+              View All Services
             </Link>
           </div>
         </div>
@@ -420,24 +381,11 @@ function Home() {
             <p className="text-grey-text text-lg mb-8 max-w-2xl mx-auto">
               Contact us today to discuss your project with a member of our team.
             </p>
-            <Link
-              to="/contact"
-              className="btn-codepen group relative inline-flex items-center justify-center bg-transparent text-primary px-10 py-4 uppercase tracking-wider"
-            >
-              <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
-                <rect x="0" y="0" width="100%" height="100%" />
+            <Link to="/contact" className="btn-codepen">
+              <svg>
+                <rect x="0" y="0" width="200" height="56" />
               </svg>
-              <span className="relative z-10 flex items-center gap-2">
-                Get Free Quote
-                <svg 
-                  className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </span>
+              Get Free Quote
             </Link>
           </motion.div>
         </div>

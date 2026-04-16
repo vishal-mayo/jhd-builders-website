@@ -16,50 +16,64 @@
   
   /* CodePen btn-1 Style - Green border */
   .btn-codepen {
-    @apply relative overflow-hidden font-normal;
+    @apply relative inline-block text-center uppercase tracking-wider text-primary font-normal;
+    width: 200px;
+    height: 56px;
+    line-height: 56px;
   }
   .btn-codepen:hover {
     @apply font-bold;
   }
   .btn-codepen svg {
-    @apply absolute inset-0 w-full h-full;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
   .btn-codepen rect {
     fill: none;
     stroke: currentColor;
     stroke-width: 2;
-    stroke-dasharray: 400, 0;
+    stroke-dasharray: 512, 0;
     stroke-dashoffset: 0;
     transition: all 0.5s ease-out;
   }
   .btn-codepen:hover rect {
     stroke-width: 4;
-    stroke-dasharray: 100, 300;
-    stroke-dashoffset: 200;
+    stroke-dasharray: 21, 491;
+    stroke-dashoffset: -344;
   }
 
   /* CodePen btn-1 Style - White border */
   .btn-codepen-white {
-    @apply relative overflow-hidden font-normal;
+    @apply relative inline-block text-center uppercase tracking-wider text-white font-normal;
+    width: 200px;
+    height: 56px;
+    line-height: 56px;
   }
   .btn-codepen-white:hover {
     @apply font-bold;
   }
   .btn-codepen-white svg {
-    @apply absolute inset-0 w-full h-full;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
   .btn-codepen-white rect {
     fill: none;
     stroke: currentColor;
     stroke-width: 2;
-    stroke-dasharray: 400, 0;
+    stroke-dasharray: 512, 0;
     stroke-dashoffset: 0;
     transition: all 0.5s ease-out;
   }
   .btn-codepen-white:hover rect {
     stroke-width: 4;
-    stroke-dasharray: 100, 300;
-    stroke-dashoffset: 200;
+    stroke-dasharray: 21, 491;
+    stroke-dashoffset: -344;
   }
 }
 
