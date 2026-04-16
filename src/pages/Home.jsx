@@ -56,24 +56,29 @@ function Home() {
               Commercial & Property Building Specialist
             </motion.h1>
 
-            {/* CTA Buttons with CodePen Style Animation */}
+            {/* CTA Buttons with CodePen btn-1 Style - Border Draw Animation */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-6 justify-center"
             >
-              {/* Primary Button - Sweep from bottom-left to top-right */}
+              {/* Primary Button - Border segments that disappear on hover */}
               <Link
                 to="/contact"
-                className="group relative overflow-hidden bg-primary text-white px-10 py-4 font-semibold text-lg uppercase tracking-wider"
+                className="group relative bg-primary text-white px-10 py-4 text-lg uppercase tracking-wider"
               >
-                {/* Sweep effect using skewed pseudo-element */}
-                <span 
-                  className="absolute inset-0 bg-white transform origin-bottom-left -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"
-                />
-                {/* Text - changes color on hover */}
-                <span className="relative z-10 flex items-center gap-2 group-hover:text-primary transition-colors duration-500">
+                {/* Top border - slides out left on hover */}
+                <span className="absolute top-0 left-0 w-full h-0.5 bg-white transform origin-right scale-x-100 group-hover:scale-x-0 transition-transform duration-300 ease-out" />
+                {/* Right border - slides out up on hover */}
+                <span className="absolute top-0 right-0 w-0.5 h-full bg-white transform origin-bottom scale-y-100 group-hover:scale-y-0 transition-transform duration-300 ease-out delay-75" />
+                {/* Bottom border - slides out right on hover */}
+                <span className="absolute bottom-0 right-0 w-full h-0.5 bg-white transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300 ease-out delay-150" />
+                {/* Left border - slides out down on hover */}
+                <span className="absolute bottom-0 left-0 w-0.5 h-full bg-white transform origin-top scale-y-100 group-hover:scale-y-0 transition-transform duration-300 ease-out delay-225" />
+                
+                {/* Text with bold on hover and underline */}
+                <span className="relative flex items-center gap-2 font-normal group-hover:font-bold transition-all duration-300">
                   Contact Us
                   <svg 
                     className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
@@ -84,19 +89,26 @@ function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </span>
+                {/* Underline that appears on hover */}
+                <span className="absolute bottom-2 left-10 right-10 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out delay-300" />
               </Link>
 
-              {/* Secondary Button - Border with Sweep */}
+              {/* Secondary Button - Border segments */}
               <Link
                 to="/services"
-                className="group relative overflow-hidden border-2 border-white text-white px-10 py-4 font-semibold text-lg uppercase tracking-wider"
+                className="group relative bg-transparent text-white px-10 py-4 text-lg uppercase tracking-wider"
               >
-                {/* Sweep effect using skewed pseudo-element */}
-                <span 
-                  className="absolute inset-0 bg-white transform origin-bottom-left -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"
-                />
-                {/* Text - changes color on hover */}
-                <span className="relative z-10 flex items-center gap-2 group-hover:text-dark transition-colors duration-500">
+                {/* Top border - slides out left on hover */}
+                <span className="absolute top-0 left-0 w-full h-0.5 bg-white transform origin-right scale-x-100 group-hover:scale-x-0 transition-transform duration-300 ease-out" />
+                {/* Right border - slides out up on hover */}
+                <span className="absolute top-0 right-0 w-0.5 h-full bg-white transform origin-bottom scale-y-100 group-hover:scale-y-0 transition-transform duration-300 ease-out delay-75" />
+                {/* Bottom border - slides out right on hover */}
+                <span className="absolute bottom-0 right-0 w-full h-0.5 bg-white transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300 ease-out delay-150" />
+                {/* Left border - slides out down on hover */}
+                <span className="absolute bottom-0 left-0 w-0.5 h-full bg-white transform origin-top scale-y-100 group-hover:scale-y-0 transition-transform duration-300 ease-out delay-225" />
+                
+                {/* Text with bold on hover and underline */}
+                <span className="relative flex items-center gap-2 font-normal group-hover:font-bold transition-all duration-300">
                   Our Services
                   <svg 
                     className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
@@ -107,6 +119,8 @@ function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </span>
+                {/* Underline that appears on hover */}
+                <span className="absolute bottom-2 left-10 right-10 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out delay-300" />
               </Link>
             </motion.div>
           </div>
@@ -292,10 +306,18 @@ function Home() {
           <div className="text-center mt-12">
             <Link
               to="/services"
-              className="group relative overflow-hidden bg-primary text-white px-10 py-4 font-semibold uppercase tracking-wider"
+              className="group relative bg-primary text-white px-10 py-4 uppercase tracking-wider"
             >
-              <span className="absolute inset-0 bg-white transform origin-bottom-left -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
-              <span className="relative z-10 flex items-center gap-2 group-hover:text-primary transition-colors duration-500">
+              {/* Top border */}
+              <span className="absolute top-0 left-0 w-full h-0.5 bg-white transform origin-right scale-x-100 group-hover:scale-x-0 transition-transform duration-300 ease-out" />
+              {/* Right border */}
+              <span className="absolute top-0 right-0 w-0.5 h-full bg-white transform origin-bottom scale-y-100 group-hover:scale-y-0 transition-transform duration-300 ease-out delay-75" />
+              {/* Bottom border */}
+              <span className="absolute bottom-0 right-0 w-full h-0.5 bg-white transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300 ease-out delay-150" />
+              {/* Left border */}
+              <span className="absolute bottom-0 left-0 w-0.5 h-full bg-white transform origin-top scale-y-100 group-hover:scale-y-0 transition-transform duration-300 ease-out delay-225" />
+              
+              <span className="relative flex items-center gap-2 font-normal group-hover:font-bold transition-all duration-300">
                 View All Services
                 <svg 
                   className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
@@ -306,6 +328,7 @@ function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </span>
+              <span className="absolute bottom-2 left-10 right-10 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out delay-300" />
             </Link>
           </div>
         </div>
@@ -424,10 +447,18 @@ function Home() {
             </p>
             <Link
               to="/contact"
-              className="group relative overflow-hidden bg-primary text-white px-10 py-4 font-semibold uppercase tracking-wider"
+              className="group relative bg-primary text-white px-10 py-4 uppercase tracking-wider"
             >
-              <span className="absolute inset-0 bg-white transform origin-bottom-left -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
-              <span className="relative z-10 flex items-center gap-2 group-hover:text-primary transition-colors duration-500">
+              {/* Top border */}
+              <span className="absolute top-0 left-0 w-full h-0.5 bg-white transform origin-right scale-x-100 group-hover:scale-x-0 transition-transform duration-300 ease-out" />
+              {/* Right border */}
+              <span className="absolute top-0 right-0 w-0.5 h-full bg-white transform origin-bottom scale-y-100 group-hover:scale-y-0 transition-transform duration-300 ease-out delay-75" />
+              {/* Bottom border */}
+              <span className="absolute bottom-0 right-0 w-full h-0.5 bg-white transform origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-300 ease-out delay-150" />
+              {/* Left border */}
+              <span className="absolute bottom-0 left-0 w-0.5 h-full bg-white transform origin-top scale-y-100 group-hover:scale-y-0 transition-transform duration-300 ease-out delay-225" />
+              
+              <span className="relative flex items-center gap-2 font-normal group-hover:font-bold transition-all duration-300">
                 Get Free Quote
                 <svg 
                   className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
@@ -438,6 +469,7 @@ function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </span>
+              <span className="absolute bottom-2 left-10 right-10 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out delay-300" />
             </Link>
           </motion.div>
         </div>
