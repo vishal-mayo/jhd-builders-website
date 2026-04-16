@@ -13,6 +13,52 @@
   .btn-primary { @apply bg-primary text-white px-8 py-4 font-semibold transition-all duration-300 hover:bg-primary-dark; }
   .section-padding { @apply py-20 px-4 sm:px-6 lg:px-8; }
   .container-custom { @apply max-w-7xl mx-auto; }
+  
+  /* CodePen btn-1 Style - Green border */
+  .btn-codepen {
+    @apply relative overflow-hidden font-normal transition-all duration-300;
+  }
+  .btn-codepen:hover {
+    @apply font-bold;
+  }
+  .btn-codepen svg {
+    @apply absolute inset-0 w-full h-full;
+  }
+  .btn-codepen rect {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-dasharray: 400, 0;
+    stroke-dashoffset: 0;
+    transition: all 0.4s linear;
+  }
+  .btn-codepen:hover rect {
+    stroke-dasharray: 40, 400;
+    stroke-dashoffset: 240;
+  }
+  
+  /* CodePen btn-1 Style - White border */
+  .btn-codepen-white {
+    @apply relative overflow-hidden font-normal transition-all duration-300;
+  }
+  .btn-codepen-white:hover {
+    @apply font-bold;
+  }
+  .btn-codepen-white svg {
+    @apply absolute inset-0 w-full h-full;
+  }
+  .btn-codepen-white rect {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-dasharray: 400, 0;
+    stroke-dashoffset: 0;
+    transition: all 0.4s linear;
+  }
+  .btn-codepen-white:hover rect {
+    stroke-dasharray: 40, 400;
+    stroke-dashoffset: 240;
+  }
 }
 
 ::-webkit-scrollbar { width: 8px; }

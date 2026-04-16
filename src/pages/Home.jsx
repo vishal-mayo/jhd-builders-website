@@ -56,29 +56,22 @@ function Home() {
               Commercial & Property Building Specialist
             </motion.h1>
 
-            {/* CTA Buttons with CodePen btn-1 Style - Border Draw Animation */}
+            {/* CTA Buttons with CodePen btn-1 Style */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-6 justify-center"
             >
-              {/* Primary Button - Green border, transparent bg */}
+              {/* Primary Button */}
               <Link
                 to="/contact"
-                className="group relative bg-transparent text-primary px-10 py-4 text-lg uppercase tracking-wider"
+                className="btn-codepen group relative inline-flex items-center justify-center bg-transparent text-primary px-10 py-4 text-lg uppercase tracking-wider"
               >
-                {/* Top border - full width */}
-                <span className="absolute top-0 left-0 w-full h-0.5 bg-primary transform origin-right scale-x-100 group-hover:scale-x-0 transition-transform duration-300 ease-out" />
-                {/* Right border - full height */}
-                <span className="absolute top-0 right-0 w-0.5 h-full bg-primary transform origin-bottom scale-y-100 group-hover:scale-y-0 transition-transform duration-300 ease-out delay-75" />
-                {/* Bottom border - SHORT (just under text) */}
-                <span className="absolute bottom-3 left-1/2 -translate-x-1/2 w-16 h-0.5 bg-primary transform scale-x-100 group-hover:scale-x-0 transition-transform duration-300 ease-out delay-150" />
-                {/* Left border - full height */}
-                <span className="absolute bottom-0 left-0 w-0.5 h-full bg-primary transform origin-top scale-y-100 group-hover:scale-y-0 transition-transform duration-300 ease-out delay-225" />
-                
-                {/* Text with bold on hover */}
-                <span className="relative flex items-center gap-2 font-normal group-hover:font-bold transition-all duration-300">
+                <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+                  <rect x="0" y="0" width="100%" height="100%" />
+                </svg>
+                <span className="relative z-10 flex items-center gap-2">
                   Contact Us
                   <svg 
                     className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
@@ -91,22 +84,15 @@ function Home() {
                 </span>
               </Link>
 
-              {/* Secondary Button - White border, transparent bg */}
+              {/* Secondary Button */}
               <Link
                 to="/services"
-                className="group relative bg-transparent text-white px-10 py-4 text-lg uppercase tracking-wider"
+                className="btn-codepen-white group relative inline-flex items-center justify-center bg-transparent text-white px-10 py-4 text-lg uppercase tracking-wider"
               >
-                {/* Top border - full width */}
-                <span className="absolute top-0 left-0 w-full h-0.5 bg-white transform origin-right scale-x-100 group-hover:scale-x-0 transition-transform duration-300 ease-out" />
-                {/* Right border - full height */}
-                <span className="absolute top-0 right-0 w-0.5 h-full bg-white transform origin-bottom scale-y-100 group-hover:scale-y-0 transition-transform duration-300 ease-out delay-75" />
-                {/* Bottom border - SHORT (just under text) */}
-                <span className="absolute bottom-3 left-1/2 -translate-x-1/2 w-16 h-0.5 bg-white transform scale-x-100 group-hover:scale-x-0 transition-transform duration-300 ease-out delay-150" />
-                {/* Left border - full height */}
-                <span className="absolute bottom-0 left-0 w-0.5 h-full bg-white transform origin-top scale-y-100 group-hover:scale-y-0 transition-transform duration-300 ease-out delay-225" />
-                
-                {/* Text with bold on hover */}
-                <span className="relative flex items-center gap-2 font-normal group-hover:font-bold transition-all duration-300">
+                <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+                  <rect x="0" y="0" width="100%" height="100%" />
+                </svg>
+                <span className="relative z-10 flex items-center gap-2">
                   Our Services
                   <svg 
                     className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
@@ -302,18 +288,12 @@ function Home() {
           <div className="text-center mt-12">
             <Link
               to="/services"
-              className="group relative bg-transparent text-primary px-10 py-4 uppercase tracking-wider"
+              className="btn-codepen group relative inline-flex items-center justify-center bg-transparent text-primary px-10 py-4 uppercase tracking-wider"
             >
-              {/* Top border */}
-              <span className="absolute top-0 left-0 w-full h-0.5 bg-primary transform origin-right scale-x-100 group-hover:scale-x-0 transition-transform duration-300 ease-out" />
-              {/* Right border */}
-              <span className="absolute top-0 right-0 w-0.5 h-full bg-primary transform origin-bottom scale-y-100 group-hover:scale-y-0 transition-transform duration-300 ease-out delay-75" />
-              {/* Bottom border - SHORT */}
-              <span className="absolute bottom-3 left-1/2 -translate-x-1/2 w-16 h-0.5 bg-primary transform scale-x-100 group-hover:scale-x-0 transition-transform duration-300 ease-out delay-150" />
-              {/* Left border */}
-              <span className="absolute bottom-0 left-0 w-0.5 h-full bg-primary transform origin-top scale-y-100 group-hover:scale-y-0 transition-transform duration-300 ease-out delay-225" />
-              
-              <span className="relative flex items-center gap-2 font-normal group-hover:font-bold transition-all duration-300">
+              <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+                <rect x="0" y="0" width="100%" height="100%" />
+              </svg>
+              <span className="relative z-10 flex items-center gap-2">
                 View All Services
                 <svg 
                   className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
@@ -442,18 +422,12 @@ function Home() {
             </p>
             <Link
               to="/contact"
-              className="group relative bg-transparent text-primary px-10 py-4 uppercase tracking-wider"
+              className="btn-codepen group relative inline-flex items-center justify-center bg-transparent text-primary px-10 py-4 uppercase tracking-wider"
             >
-              {/* Top border */}
-              <span className="absolute top-0 left-0 w-full h-0.5 bg-primary transform origin-right scale-x-100 group-hover:scale-x-0 transition-transform duration-300 ease-out" />
-              {/* Right border */}
-              <span className="absolute top-0 right-0 w-0.5 h-full bg-primary transform origin-bottom scale-y-100 group-hover:scale-y-0 transition-transform duration-300 ease-out delay-75" />
-              {/* Bottom border - SHORT */}
-              <span className="absolute bottom-3 left-1/2 -translate-x-1/2 w-16 h-0.5 bg-primary transform scale-x-100 group-hover:scale-x-0 transition-transform duration-300 ease-out delay-150" />
-              {/* Left border */}
-              <span className="absolute bottom-0 left-0 w-0.5 h-full bg-primary transform origin-top scale-y-100 group-hover:scale-y-0 transition-transform duration-300 ease-out delay-225" />
-              
-              <span className="relative flex items-center gap-2 font-normal group-hover:font-bold transition-all duration-300">
+              <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+                <rect x="0" y="0" width="100%" height="100%" />
+              </svg>
+              <span className="relative z-10 flex items-center gap-2">
                 Get Free Quote
                 <svg 
                   className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
