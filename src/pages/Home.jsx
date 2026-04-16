@@ -15,6 +15,27 @@ function Home() {
 
   return (
     <>
+      {/* Scrolling Banner */}
+      <div className="bg-primary py-3 overflow-hidden relative z-20">
+        <div className="whitespace-nowrap animate-marquee">
+          <span className="text-white font-semibold text-sm uppercase tracking-wider mx-8">
+            Visit Our London Showroom
+          </span>
+          <span className="text-white/60 mx-4">|</span>
+          <span className="text-white font-semibold text-sm uppercase tracking-wider mx-8">
+            We Now Offer Fire Rated Door Installations In London And Surrounding Counties
+          </span>
+          <span className="text-white/60 mx-4">|</span>
+          <span className="text-white font-semibold text-sm uppercase tracking-wider mx-8">
+            Visit Our London Showroom
+          </span>
+          <span className="text-white/60 mx-4">|</span>
+          <span className="text-white font-semibold text-sm uppercase tracking-wider mx-8">
+            We Now Offer Fire Rated Door Installations In London And Surrounding Counties
+          </span>
+        </div>
+      </div>
+
       {/* Hero Section with Vimeo Video Background */}
       <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
         {/* Vimeo Video Background */}
@@ -32,20 +53,6 @@ function Home() {
         {/* Hero Content */}
         <div className="container-custom px-4 sm:px-6 lg:px-8 relative z-10 pt-20">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Logo */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              className="mb-8"
-            >
-              <img 
-                src="/images/logo.png" 
-                alt="JHD Builders Limited" 
-                className="h-32 md:h-40 mx-auto"
-              />
-            </motion.div>
-
             {/* Tagline */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}

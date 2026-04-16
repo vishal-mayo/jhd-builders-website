@@ -34,14 +34,12 @@ function Navigation() {
       >
         <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <Link to="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                <span className="font-condensed font-bold text-2xl text-white">JHD</span>
-              </div>
-              <div className="hidden sm:block">
-                <span className="font-condensed font-bold text-xl text-white block leading-none">BUILDERS</span>
-                <span className="text-grey-light text-xs tracking-wider">LIMITED</span>
-              </div>
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/images/logo.png" 
+                alt="JHD Builders Limited" 
+                className="h-14 w-auto"
+              />
             </Link>
 
             <div className="hidden lg:flex items-center gap-8">
@@ -65,10 +63,10 @@ function Navigation() {
             </div>
 
             <div className="hidden lg:block">
-              <Link 
-                to="/contact" 
-                className="bg-primary text-white px-6 py-3 font-semibold hover:bg-primary-dark transition-colors"
-              >
+              <Link to="/contact" className="btn-codepen-nav">
+                <svg>
+                  <rect x="0" y="0" width="140" height="48" />
+                </svg>
                 Get Quote
               </Link>
             </div>

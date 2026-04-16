@@ -75,6 +75,46 @@
     stroke-dasharray: 21, 491;
     stroke-dashoffset: -344;
   }
+
+  /* Nav Button - Smaller version */
+  .btn-codepen-nav {
+    @apply relative inline-block text-center uppercase tracking-wider text-primary font-normal text-sm;
+    width: 140px;
+    height: 48px;
+    line-height: 48px;
+  }
+  .btn-codepen-nav:hover {
+    @apply font-bold;
+  }
+  .btn-codepen-nav svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-codepen-nav rect {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-dasharray: 376, 0;
+    stroke-dashoffset: 0;
+    transition: all 0.5s ease-out;
+  }
+  .btn-codepen-nav:hover rect {
+    stroke-width: 3;
+    stroke-dasharray: 21, 355;
+    stroke-dashoffset: -252;
+  }
+
+  /* Marquee Animation */
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
 }
 
 ::-webkit-scrollbar { width: 8px; }
