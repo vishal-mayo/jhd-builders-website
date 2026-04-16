@@ -16,7 +16,7 @@
   
   /* CodePen btn-1 Style - Green border */
   .btn-codepen {
-    @apply relative overflow-hidden font-normal transition-all duration-300;
+    @apply relative overflow-hidden font-normal;
   }
   .btn-codepen:hover {
     @apply font-bold;
@@ -30,16 +30,17 @@
     stroke-width: 2;
     stroke-dasharray: 400, 0;
     stroke-dashoffset: 0;
-    transition: all 0.4s linear;
+    transition: all 0.5s ease-out;
   }
   .btn-codepen:hover rect {
-    stroke-dasharray: 40, 400;
-    stroke-dashoffset: 240;
+    stroke-width: 4;
+    stroke-dasharray: 100, 300;
+    stroke-dashoffset: 200;
   }
-  
+
   /* CodePen btn-1 Style - White border */
   .btn-codepen-white {
-    @apply relative overflow-hidden font-normal transition-all duration-300;
+    @apply relative overflow-hidden font-normal;
   }
   .btn-codepen-white:hover {
     @apply font-bold;
@@ -53,11 +54,12 @@
     stroke-width: 2;
     stroke-dasharray: 400, 0;
     stroke-dashoffset: 0;
-    transition: all 0.4s linear;
+    transition: all 0.5s ease-out;
   }
   .btn-codepen-white:hover rect {
-    stroke-dasharray: 40, 400;
-    stroke-dashoffset: 240;
+    stroke-width: 4;
+    stroke-dasharray: 100, 300;
+    stroke-dashoffset: 200;
   }
 }
 
