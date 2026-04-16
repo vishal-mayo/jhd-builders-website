@@ -15,27 +15,6 @@ function Home() {
 
   return (
     <>
-      {/* Scrolling Banner */}
-      <div className="bg-primary py-3 overflow-hidden relative z-20">
-        <div className="whitespace-nowrap animate-marquee">
-          <span className="text-white font-semibold text-sm uppercase tracking-wider mx-8">
-            Visit Our London Showroom
-          </span>
-          <span className="text-white/60 mx-4">|</span>
-          <span className="text-white font-semibold text-sm uppercase tracking-wider mx-8">
-            We Now Offer Fire Rated Door Installations In London And Surrounding Counties
-          </span>
-          <span className="text-white/60 mx-4">|</span>
-          <span className="text-white font-semibold text-sm uppercase tracking-wider mx-8">
-            Visit Our London Showroom
-          </span>
-          <span className="text-white/60 mx-4">|</span>
-          <span className="text-white font-semibold text-sm uppercase tracking-wider mx-8">
-            We Now Offer Fire Rated Door Installations In London And Surrounding Counties
-          </span>
-        </div>
-      </div>
-
       {/* Hero Section with Vimeo Video Background */}
       <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
         {/* Vimeo Video Background */}
@@ -113,6 +92,29 @@ function Home() {
           </motion.div>
         </motion.div>
       </section>
+
+      {/* Diagonal Scrolling Banner */}
+      <div className="relative -mt-12 z-20 overflow-hidden">
+        <div className="bg-primary py-4 transform -rotate-2 scale-105">
+          <div className="whitespace-nowrap animate-marquee">
+            <span className="text-white font-semibold text-sm uppercase tracking-wider mx-8">
+              Visit Our London Showroom
+            </span>
+            <span className="text-white/60 mx-4">|</span>
+            <span className="text-white font-semibold text-sm uppercase tracking-wider mx-8">
+              We Now Offer Fire Rated Door Installations In London And Surrounding Counties
+            </span>
+            <span className="text-white/60 mx-4">|</span>
+            <span className="text-white font-semibold text-sm uppercase tracking-wider mx-8">
+              Visit Our London Showroom
+            </span>
+            <span className="text-white/60 mx-4">|</span>
+            <span className="text-white font-semibold text-sm uppercase tracking-wider mx-8">
+              We Now Offer Fire Rated Door Installations In London And Surrounding Counties
+            </span>
+          </div>
+        </div>
+      </div>
 
       {/* About Section */}
       <section id="about" className="section-padding bg-darker">
