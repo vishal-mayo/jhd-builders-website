@@ -94,25 +94,25 @@ function Home() {
       </section>
 
       {/* Diagonal Scrolling Banner */}
-      <div className="relative -mt-8 z-20 overflow-hidden">
-        <div className="bg-primary py-5 transform -rotate-1">
+      <div className="relative -mt-6 z-20 overflow-visible">
+        <div className="bg-primary py-6 transform -rotate-1 scale-110 origin-center">
           <div className="whitespace-nowrap animate-marquee">
-            <span className="text-white font-bold text-base uppercase tracking-widest mx-10">
+            <span className="text-white font-semibold text-lg uppercase tracking-wide mx-8">
               Visit Our London Showroom
             </span>
-            <span className="text-white/80 mx-6 text-lg">★</span>
-            <span className="text-white font-bold text-base uppercase tracking-widest mx-10">
+            <span className="text-white/60 mx-4">|</span>
+            <span className="text-white font-semibold text-lg uppercase tracking-wide mx-8">
               We Now Offer Fire Rated Door Installations In London And Surrounding Counties
             </span>
-            <span className="text-white/80 mx-6 text-lg">★</span>
-            <span className="text-white font-bold text-base uppercase tracking-widest mx-10">
+            <span className="text-white/60 mx-4">|</span>
+            <span className="text-white font-semibold text-lg uppercase tracking-wide mx-8">
               Visit Our London Showroom
             </span>
-            <span className="text-white/80 mx-6 text-lg">★</span>
-            <span className="text-white font-bold text-base uppercase tracking-widest mx-10">
+            <span className="text-white/60 mx-4">|</span>
+            <span className="text-white font-semibold text-lg uppercase tracking-wide mx-8">
               We Now Offer Fire Rated Door Installations In London And Surrounding Counties
             </span>
-            <span className="text-white/80 mx-6 text-lg">★</span>
+            <span className="text-white/60 mx-4">|</span>
           </div>
         </div>
       </div>
