@@ -78,7 +78,8 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <iframe
             src="https://player.vimeo.com/video/945934477?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-            className="absolute w-[150%] h-[150%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            className="absolute w-full h-full object-cover"
+            style={{ width: '100vw', height: '100vh', minWidth: '100%', minHeight: '100%' }}
             frameBorder="0" allow="autoplay; fullscreen" allowFullScreen
           />
           <div className="absolute inset-0 bg-black/50" />
@@ -117,8 +118,8 @@ export default function Home() {
       </section>
 
       {/* Marquee */}
-      <div className="relative -mt-6 z-20 overflow-visible">
-        <div className="bg-primary py-6 transform -rotate-1 scale-110 origin-center">
+      <div className="relative -mt-6 z-20 overflow-hidden">
+        <div className="bg-primary py-6 transform -rotate-1 origin-center">
           <div className="whitespace-nowrap animate-marquee">
             <span className="text-white font-semibold text-lg uppercase tracking-wide mx-8">Visit Our London Showroom</span>
             <span className="text-white/60 mx-4">|</span>
