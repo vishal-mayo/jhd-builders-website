@@ -11,9 +11,9 @@ function nodePos(i) {
 export default function ServicesWheel({ selected, onSelect }) {
   return (
     <div>
-      {/* Desktop Radial Wheel */}
-      <div className="hidden lg:block">
-        <div className="relative select-none mx-auto" style={{ width: 560, height: 560 }}>
+      {/* Desktop Radial Wheel - Now visible on all screens */}
+      <div className="block">
+        <div className="relative select-none mx-auto scale-[0.65] sm:scale-[0.85] md:scale-100 origin-center" style={{ width: 560, height: 560 }}>
           <svg className="absolute inset-0 pointer-events-none" width="560" height="560">
             {SERVICES.map((s, i) => {
               const { a } = nodePos(i)
@@ -75,8 +75,8 @@ export default function ServicesWheel({ selected, onSelect }) {
         </div>
       </div>
 
-      {/* Mobile Grid */}
-      <div className="lg:hidden grid grid-cols-2 sm:grid-cols-3 gap-3">
+      {/* Mobile Grid - Hidden, using wheel instead */}
+      <div className="hidden grid-cols-2 sm:grid-cols-3 gap-3">
         {SERVICES.map((s) => {
           const isActive = selected?.id === s.id
           return (
