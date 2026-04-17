@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 
+const JHD_LOGO = '/images/logo.png'
+
 function Footer() {
   return (
     <footer className="bg-darker py-16">
@@ -7,13 +9,12 @@ function Footer() {
         <div className="grid md:grid-cols-4 gap-12">
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                <span className="font-condensed font-bold text-2xl text-white">JHD</span>
-              </div>
-              <div>
-                <span className="font-condensed font-bold text-xl text-white block leading-none">BUILDERS</span>
-                <span className="text-grey-light text-xs tracking-wider">LIMITED</span>
-              </div>
+              <img
+                src={JHD_LOGO}
+                alt="JHD Builders Limited"
+                className="h-14 w-auto"
+              />
+              <span className="font-condensed font-bold text-xl text-white">JHD Builders</span>
             </Link>
             <p className="text-grey-text text-sm mb-6">Commercial and property building specialists serving London for over 30 years.</p>
           </div>
