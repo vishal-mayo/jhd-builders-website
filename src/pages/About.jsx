@@ -116,7 +116,7 @@ export default function About() {
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden">
-                <img src="/images/brockley-mascot.png" alt="JHD Builders team" className="w-full h-full object-cover" />
+                <img src="/images/showroom-bathroom.png" alt="JHD Builders Showroom" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-5 -right-5 bg-primary p-5 rounded-xl shadow-2xl">
                 <div className="text-4xl font-bold text-white font-condensed">30+</div>

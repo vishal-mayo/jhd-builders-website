@@ -154,7 +154,7 @@ export default function Home() {
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="relative">
               <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                <img src="/images/brockley-mascot.png" alt="JHD Builders" className="w-full h-full object-cover" />
+                <img src="/images/showroom-bathroom.png" alt="JHD Builders Showroom" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-primary p-6 rounded-lg shadow-2xl">
                 <div className="text-5xl font-bold text-white">30+</div>
@@ -293,7 +293,7 @@ export default function Home() {
                 viewport={{ once: true }} transition={{ duration: 0.35, delay: i * 0.07 }}
               >
                 <motion.div
-                  className="w-28 h-20 bg-white rounded-xl p-3 flex items-center justify-center shadow-sm cursor-default"
+                  className="w-28 h-20 bg-dark-lighter rounded-xl p-3 flex items-center justify-center shadow-sm cursor-default border border-grey/30"
                   whileHover={{ y: -3, boxShadow: '0 8px 24px rgba(109,180,76,0.2)' }}
                   transition={{ duration: 0.2 }}
                 >
