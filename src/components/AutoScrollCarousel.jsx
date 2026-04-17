@@ -13,7 +13,7 @@ export default function AutoScrollCarousel({ children, className = '', gap = 16,
     if (!container) return;
 
     let lastTime = Date.now();
-    const pixelsPerSecond = 150; // Scroll speed - faster
+    const pixelsPerSecond = 100; // Scroll speed
 
     const animate = () => {
       if (!isPausedRef.current && !isDragging) {

@@ -77,17 +77,19 @@ export default function Home() {
       {/* Hero */}
       <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
+          {/* Video container - responsive to orientation */}
           <div 
-            className="absolute inset-0"
+            className="absolute"
             style={{ 
-              position: 'absolute',
               top: '50%',
               left: '50%',
-              width: '177.77777778vh',
-              height: '70vh',
-              minWidth: '100vw',
-              minHeight: '39.375vw',
-              transform: 'translate(-50%, -50%)'
+              transform: 'translate(-50%, -50%)',
+              // When width > height (landscape/wide screens): full width
+              // When height > width (portrait/tall screens): full height
+              width: '100vw',
+              height: '100%',
+              minWidth: '177.78vh', // 16:9 ratio - ensures full width coverage
+              minHeight: '56.25vw', // 9:16 ratio - ensures full height coverage
             }}
           >
             <iframe
