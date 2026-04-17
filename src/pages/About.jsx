@@ -216,7 +216,7 @@ export default function About() {
           <div className="flex flex-wrap justify-center gap-4 lg:gap-6 mb-14">
             {ACCREDITATIONS.map((a, i) => (
               <motion.div key={a.name} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.35, delay: i * 0.07 }}>
-                <motion.div className="w-28 h-20 bg-white rounded-xl p-3 flex items-center justify-center shadow-sm cursor-default"
+                <motion.div className="w-28 h-20 bg-dark-lighter rounded-xl p-3 flex items-center justify-center shadow-sm cursor-default border border-grey/30"
                   whileHover={{ y: -3, boxShadow: '0 8px 24px rgba(109,180,76,0.2)' }} transition={{ duration: 0.2 }}>
                   <img src={a.img} alt={a.name} className="max-w-full max-h-full object-contain" loading="lazy" />
                 </motion.div>

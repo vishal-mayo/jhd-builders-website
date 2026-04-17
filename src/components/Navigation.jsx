@@ -42,6 +42,7 @@ function Navigation() {
                 alt="JHD Builders Limited"
                 className="h-14 w-auto"
               />
+              <span className="font-condensed font-bold text-xl text-white hidden sm:block">JHD Builders</span>
             </Link>
 
             <div className="hidden lg:flex items-center gap-8">
