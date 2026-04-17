@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { motion, AnimatePresence, useInView } from 'framer-motion'
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react'
 import ServicesWheel from '../components/ServicesWheel'
-import DraggableCarousel from '../components/DraggableCarousel'
+import AutoScrollCarousel from '../components/AutoScrollCarousel'
 import { SERVICES } from '../data/services'
 
 function CountUp({ to, suffix = '', duration = 2000 }) {
@@ -321,8 +321,8 @@ export default function Home() {
           </div>
           {/* Mobile/Tablet: Scrolling Carousel */}
           <div className="lg:hidden relative">
-            <DraggableCarousel gap={16}>
-              {[...ACCREDITATIONS, ...ACCREDITATIONS, ...ACCREDITATIONS, ...ACCREDITATIONS].map((a, i) => (
+            <AutoScrollCarousel gap={16}>
+              {[...ACCREDITATIONS, ...ACCREDITATIONS].map((a, i) => (
                 <div
                   key={`${a.name}-${i}`}
                   className="flex-shrink-0 w-28 h-20 bg-dark-lighter rounded-xl p-3 flex items-center justify-center shadow-sm border border-grey/30"
@@ -330,7 +330,7 @@ export default function Home() {
                   <img src={a.img} alt={a.name} className="max-w-full max-h-full object-contain" loading="lazy" />
                 </div>
               ))}
-            </DraggableCarousel>
+            </AutoScrollCarousel>
           </div>
         </div>
       </section>
@@ -364,8 +364,8 @@ export default function Home() {
           </div>
           {/* Mobile/Tablet: Scrolling Carousel */}
           <div className="lg:hidden relative">
-            <DraggableCarousel gap={24}>
-              {[...TEAM, ...TEAM, ...TEAM, ...TEAM].map((member, i) => (
+            <AutoScrollCarousel gap={24}>
+              {[...TEAM, ...TEAM].map((member, i) => (
                 <div key={`${member.name}-${i}`} className="flex-shrink-0 text-center group w-24">
                   <div className="relative mx-auto mb-3 w-20 h-20">
                     <div className="w-full h-full rounded-full overflow-hidden border-2 border-grey/30 bg-dark-lighter">
@@ -376,7 +376,7 @@ export default function Home() {
                   <p className="text-primary text-[11px] uppercase tracking-wide leading-tight">{member.role}</p>
                 </div>
               ))}
-            </DraggableCarousel>
+            </AutoScrollCarousel>
           </div>
         </div>
       </section>
