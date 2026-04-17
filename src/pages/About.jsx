@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { CheckCircle2 } from 'lucide-react'
+import DraggableCarousel from '../components/DraggableCarousel'
 
 const TEAM_CATEGORIES = [
   {
@@ -226,13 +227,13 @@ export default function About() {
           </div>
           {/* Mobile/Tablet: Scrolling Carousel */}
           <div className="lg:hidden relative mb-14">
-            <div className="flex gap-4 animate-scroll-x">
-              {[...ACCREDITATIONS, ...ACCREDITATIONS].map((a, i) => (
+            <DraggableCarousel gap={16}>
+              {[...ACCREDITATIONS, ...ACCREDITATIONS, ...ACCREDITATIONS, ...ACCREDITATIONS].map((a, i) => (
                 <div key={`${a.name}-${i}`} className="flex-shrink-0 w-28 h-20 bg-dark-lighter rounded-xl p-3 flex items-center justify-center shadow-sm border border-grey/30">
                   <img src={a.img} alt={a.name} className="max-w-full max-h-full object-contain" loading="lazy" />
                 </div>
               ))}
-            </div>
+            </DraggableCarousel>
           </div>
 
           <div className="text-center mb-8">
@@ -251,13 +252,13 @@ export default function About() {
           </div>
           {/* Mobile/Tablet: Scrolling Carousel */}
           <div className="lg:hidden relative">
-            <div className="flex gap-4 animate-scroll-x">
-              {[...PARTNERS, ...PARTNERS].map((p, i) => (
+            <DraggableCarousel gap={16}>
+              {[...PARTNERS, ...PARTNERS, ...PARTNERS, ...PARTNERS].map((p, i) => (
                 <div key={`${p.name}-${i}`} className="flex-shrink-0 h-14 w-28 bg-white rounded-lg flex items-center justify-center shadow-sm overflow-hidden">
                   <img src={p.img} alt={p.name} className="w-[140%] h-[140%] object-contain" loading="lazy" />
                 </div>
               ))}
-            </div>
+            </DraggableCarousel>
           </div>
         </div>
       </section>
