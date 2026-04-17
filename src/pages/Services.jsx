@@ -1,57 +1,9 @@
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { DoorOpen, Wrench, Building2, Paintbrush, Flame, Droplets, Bike, CheckCircle2 } from 'lucide-react'
-import ServicesWheel from '../components/ServicesWheel'
-
-const SERVICES = [
-  {
-    title: 'Fire Door Installation & Maintenance',
-    Icon: DoorOpen, color: '#ff6b35',
-    desc: 'BM Trada certified fire door installation and maintenance. We offer fire rated door installations across London and surrounding counties, fully compliant with current fire safety regulations.',
-    features: ['Supply & Fit', 'BM Trada Certified', 'Maintenance Plans', 'Compliance Certification']
-  },
-  {
-    title: 'Property Maintenance',
-    Icon: Wrench, color: '#6db44c',
-    desc: 'Comprehensive property maintenance keeping your buildings safe and functional. From reactive repairs to planned maintenance programmes for landlords and housing associations.',
-    features: ['Planned Maintenance', 'Emergency Repairs', 'Site Inspections', 'Compliance']
-  },
-  {
-    title: 'Building Refurbishment',
-    Icon: Building2, color: '#4a9eff',
-    desc: 'Full interior and exterior refurbishments for residential and commercial properties. Kitchens, bathrooms, relets, external works and complete property renovations.',
-    features: ['Interior Refurbishment', 'External Works', 'Relets', 'Full Renovations']
-  },
-  {
-    title: 'Venetian Plastering',
-    Icon: Paintbrush, color: '#f59e0b',
-    desc: 'Expert Venetian and decorative plastering services delivering premium finishes that transform your interior spaces and add lasting value to your property.',
-    features: ['Venetian Plaster', 'Decorative Finishes', 'Specialist Coatings', 'Restoration']
-  },
-  {
-    title: 'Fire Risk Management',
-    Icon: Flame, color: '#ef4444',
-    desc: 'Comprehensive fire safety solutions. We handle fire risk assessments, compartmentation and compliance works to keep your property safe and legally compliant.',
-    features: ['Risk Assessments', 'Compartmentation', 'Compliance Works', 'Documentation']
-  },
-  {
-    title: 'Mould Maintenance',
-    Icon: Droplets, color: '#06b6d4',
-    desc: 'Professional mould treatment, prevention and long-term maintenance ensuring healthy, safe environments for residents and building occupants.',
-    features: ['Mould Treatment', 'Prevention Measures', 'Ventilation Solutions', 'Follow-up Inspections']
-  },
-  {
-    title: 'Bike Canopies & Shelters',
-    Icon: Bike, color: '#8b5cf6',
-    desc: 'Design, supply and professional installation of bike storage canopies and shelters for residential blocks and commercial premises.',
-    features: ['Design & Supply', 'Professional Install', 'Secure Storage', 'Custom Sizes']
-  },
-]
+import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import { SERVICES } from '../data/services'
 
 export default function Services() {
-  const [expandedIdx, setExpandedIdx] = useState(null)
-
   return (
     <>
       {/* Hero */}
@@ -59,15 +11,11 @@ export default function Services() {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
         <div className="container-custom px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
             <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">Our Services</span>
-            <h1 className="font-condensed text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 uppercase">
-              What We Do
-            </h1>
+            <h1 className="font-condensed text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 uppercase">What We Do</h1>
             <p className="text-grey-text text-xl leading-relaxed">
               With our dedicated &amp; skilled workforce, we feel confident that we have everything
               necessary to cope with the many needs of our clients.
@@ -76,127 +24,74 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Interactive Diagram */}
+      {/* Tile Grid */}
       <section className="section-padding bg-dark">
         <div className="container-custom px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
-          >
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">Interactive Overview</span>
-            <h2 className="font-condensed text-3xl lg:text-4xl font-bold text-white uppercase mb-2">Explore Our Services</h2>
-            <p className="text-grey-text">Click any service to discover more</p>
-          </motion.div>
-          <ServicesWheel />
-        </div>
-      </section>
-
-      {/* Service Accordion */}
-      <section className="section-padding bg-darker">
-        <div className="container-custom px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">In Detail</span>
-            <h2 className="font-condensed text-3xl lg:text-4xl font-bold text-white uppercase">All Services</h2>
-          </motion.div>
-
-          <div className="space-y-3 max-w-4xl mx-auto">
-            {SERVICES.map((s, i) => {
-              const isOpen = expandedIdx === i
-              return (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {SERVICES.map((s, i) => (
+              <motion.div key={s.slug}
+                initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }} transition={{ duration: 0.45, delay: (i % 3) * 0.08 }}
+              >
                 <motion.div
-                  key={s.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.05 }}
+                  className="h-full bg-dark-lighter rounded-2xl border border-grey/20 p-7 flex flex-col cursor-default"
+                  whileHover={{ y: -4, borderColor: `${s.color}60` }}
+                  transition={{ duration: 0.2 }}
                 >
-                  <div
-                    className="bg-dark rounded-xl border overflow-hidden cursor-pointer transition-colors duration-300"
-                    style={{ borderColor: isOpen ? `${s.color}60` : '#434549' }}
-                    onClick={() => setExpandedIdx(isOpen ? null : i)}
-                  >
-                    <div className="flex items-center gap-4 p-5">
-                      <div className="w-11 h-11 rounded-lg flex items-center justify-center flex-shrink-0"
-                        style={{ backgroundColor: `${s.color}18` }}>
-                        <s.Icon size={20} color={s.color} />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="font-condensed text-xl font-bold text-white">{s.title}</h3>
-                        {!isOpen && (
-                          <p className="text-grey-text text-sm mt-0.5 truncate">{s.desc}</p>
-                        )}
-                      </div>
-                      <motion.div
-                        animate={{ rotate: isOpen ? 180 : 0 }}
-                        transition={{ duration: 0.25 }}
-                        className="text-grey-text flex-shrink-0"
-                      >
-                        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </motion.div>
-                    </div>
-
-                    <AnimatePresence>
-                      {isOpen && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.28 }}
-                          className="overflow-hidden"
-                        >
-                          <div className="px-5 pb-5 border-t border-grey/20 pt-4">
-                            <p className="text-grey-text leading-relaxed mb-4">{s.desc}</p>
-                            <div className="flex flex-wrap gap-2">
-                              {s.features.map(f => (
-                                <span key={f}
-                                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm border"
-                                  style={{ borderColor: `${s.color}50`, color: s.color, backgroundColor: `${s.color}08` }}>
-                                  <CheckCircle2 size={13} />
-                                  {f}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                  {/* Icon */}
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-5 flex-shrink-0"
+                    style={{ backgroundColor: `${s.color}18` }}>
+                    <s.Icon size={28} color={s.color} />
                   </div>
+
+                  {/* Title */}
+                  <h3 className="font-condensed text-xl font-bold text-white mb-3">{s.title}</h3>
+
+                  {/* Description */}
+                  <p className="text-grey-text text-sm leading-relaxed mb-4 flex-1">{s.desc}</p>
+
+                  {/* Features */}
+                  <div className="flex flex-wrap gap-1.5 mb-5">
+                    {s.features.slice(0, 4).map(f => (
+                      <span key={f}
+                        className="flex items-center gap-1 px-2.5 py-1 rounded-full text-xs border"
+                        style={{ borderColor: `${s.color}45`, color: s.color, backgroundColor: `${s.color}08` }}
+                      >
+                        <CheckCircle2 size={10} />{f}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* CTA */}
+                  <Link
+                    to={`/services/${s.slug}`}
+                    className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider group hover:gap-3 transition-all"
+                    style={{ color: s.color }}
+                  >
+                    Learn More <ArrowRight size={14} />
+                  </Link>
                 </motion.div>
-              )
-            })}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="section-padding bg-dark">
+      <section className="section-padding bg-darker">
         <div className="container-custom px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }} transition={{ duration: 0.6 }}
             >
               <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">Why Choose Us</span>
-              <h2 className="font-condensed text-4xl lg:text-5xl font-bold text-white mb-8 uppercase">
-                Experience &amp; Expertise
-              </h2>
+              <h2 className="font-condensed text-4xl lg:text-5xl font-bold text-white mb-8 uppercase">Experience &amp; Expertise</h2>
               <div className="space-y-5">
                 {[
                   { title: '30+ Years Experience', desc: 'Three decades delivering quality building services across London and the South East.' },
                   { title: 'Fully Accredited', desc: 'CHAS, Construction Line and Builders Profile accredited. BM Trada certified for fire doors.' },
-                  { title: 'Skilled Workforce', desc: '15–20 dedicated operatives committed to delivering above and beyond expectations every time.' },
+                  { title: 'Skilled Workforce', desc: '15\u201320 dedicated operatives committed to delivering above and beyond expectations.' },
                   { title: 'Local Authority Trusted', desc: "Main contractor for one of the UK's largest private landlords and multiple local authorities." },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-4">
@@ -211,18 +106,13 @@ export default function Services() {
                 ))}
               </div>
             </motion.div>
-
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="bg-dark-lighter rounded-2xl p-8 border border-grey/20">
+              <div className="bg-dark rounded-2xl p-8 border border-grey/20">
                 <h3 className="font-condensed text-2xl font-bold text-white mb-2">Get a Free Quote</h3>
-                <p className="text-grey-text mb-6 text-sm leading-relaxed">
-                  Contact us today to discuss your project requirements with our experienced team.
-                </p>
+                <p className="text-grey-text mb-6 text-sm leading-relaxed">Contact us today to discuss your project requirements with our experienced team.</p>
                 <div className="flex flex-col sm:flex-row gap-4 flex-wrap">
                   <Link to="/contact" className="btn-codepen">
                     <svg><rect x="0" y="0" width="200" height="56" /></svg>
