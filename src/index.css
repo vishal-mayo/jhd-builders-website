@@ -45,7 +45,7 @@
   .btn-codepen:hover rect {
     stroke-width: 4;
     stroke-dasharray: 21, 571;
-    stroke-dashoffset: -424;
+    stroke-dashoffset: -414;
   }
 
   /* CodePen btn-1 Style - White border */
@@ -79,7 +79,7 @@
   .btn-codepen-white:hover rect {
     stroke-width: 4;
     stroke-dasharray: 21, 571;
-    stroke-dashoffset: -424;
+    stroke-dashoffset: -414;
   }
 
   /* Nav Button - Smaller version */
