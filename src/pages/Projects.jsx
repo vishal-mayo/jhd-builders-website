@@ -12,7 +12,7 @@ function Projects() {
       category: 'Commercial',
       location: 'Central London',
       description: 'Complete interior and exterior refurbishment of a 5-story commercial building, including new facades, windows, and modern office spaces.',
-      image: '/images/project-commercial-1.jpg'
+      image: '/images/projects/project-commercial-1.jpg'
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ function Projects() {
       category: 'Residential',
       location: 'North London',
       description: 'New build residential development comprising 12 luxury apartments with high-end finishes and modern amenities.',
-      image: '/images/project-residential-1.jpg'
+      image: '/images/projects/project-residential-1.jpg'
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ function Projects() {
       category: 'Refurbishment',
       location: 'East London',
       description: 'Extensive refurbishment of 50 social housing units including kitchen and bathroom upgrades, electrical rewiring, and energy efficiency improvements.',
-      image: '/images/project-refurb-1.jpg'
+      image: '/images/projects/project-refurb-1.jpg'
     },
     {
       id: 4,
@@ -36,7 +36,7 @@ function Projects() {
       category: 'External',
       location: 'South London',
       description: 'Large-scale external works programme including rendering, cladding replacement, and structural repairs across multiple residential blocks.',
-      image: '/images/project-external-1.jpg'
+      image: '/images/projects/project-external-1.jpg'
     },
     {
       id: 5,
@@ -44,7 +44,7 @@ function Projects() {
       category: 'Residential',
       location: 'West London',
       description: 'Specialist disability adaptations including ramp installations, bathroom modifications, and door widening for accessibility.',
-      image: '/images/project-disability-1.jpg'
+      image: '/images/projects/project-disability-1.jpg'
     },
     {
       id: 6,
@@ -52,7 +52,7 @@ function Projects() {
       category: 'Commercial',
       location: 'Central London',
       description: 'Comprehensive fire safety upgrade including fire door installation, compartmentation works, and compliance certification.',
-      image: '/images/project-fire-1.jpg'
+      image: '/images/projects/project-fire-1.jpg'
     }
   ]
 
