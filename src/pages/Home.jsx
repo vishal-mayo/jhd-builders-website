@@ -296,12 +296,13 @@ export default function Home() {
       </section>
 
       {/* Accreditations */}
-      <section className="py-14 bg-darker border-y border-grey/20">
+      <section className="py-14 bg-darker border-y border-grey/20 overflow-hidden">
         <div className="container-custom px-4">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">Accreditations &amp; Certifications</span>
           </motion.div>
-          <div className="flex flex-wrap justify-center gap-4 lg:gap-6">
+          {/* Desktop: Grid */}
+          <div className="hidden lg:flex flex-wrap justify-center gap-4 lg:gap-6">
             {ACCREDITATIONS.map((a, i) => (
               <motion.div key={a.name}
                 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
@@ -317,18 +318,32 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+          {/* Mobile/Tablet: Scrolling Carousel */}
+          <div className="lg:hidden relative">
+            <div className="flex gap-4 animate-scroll-x">
+              {[...ACCREDITATIONS, ...ACCREDITATIONS].map((a, i) => (
+                <div
+                  key={`${a.name}-${i}`}
+                  className="flex-shrink-0 w-28 h-20 bg-dark-lighter rounded-xl p-3 flex items-center justify-center shadow-sm border border-grey/30"
+                >
+                  <img src={a.img} alt={a.name} className="max-w-full max-h-full object-contain" loading="lazy" />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Team */}
-      <section className="section-padding bg-darker">
+      <section className="section-padding bg-darker overflow-hidden">
         <div className="container-custom">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto mb-14">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">Our Team</span>
             <h2 className="font-condensed text-4xl lg:text-5xl font-bold text-white mb-4 uppercase">Meet The Team</h2>
             <p className="text-grey-text">20 dedicated professionals bringing decades of combined expertise to every project.</p>
           </motion.div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+          {/* Desktop: Grid */}
+          <div className="hidden lg:grid grid-cols-5 gap-6">
             {TEAM.map((member, i) => (
               <motion.div key={member.name}
                 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
@@ -345,6 +360,22 @@ export default function Home() {
                 <p className="text-primary text-[11px] uppercase tracking-wide leading-tight">{member.role}</p>
               </motion.div>
             ))}
+          </div>
+          {/* Mobile/Tablet: Scrolling Carousel */}
+          <div className="lg:hidden relative">
+            <div className="flex gap-6 animate-scroll-x">
+              {[...TEAM, ...TEAM].map((member, i) => (
+                <div key={`${member.name}-${i}`} className="flex-shrink-0 text-center group w-24">
+                  <div className="relative mx-auto mb-3 w-20 h-20">
+                    <div className="w-full h-full rounded-full overflow-hidden border-2 border-grey/30 bg-dark-lighter">
+                      <img src={member.img} alt={member.name} className="w-full h-full object-cover" loading="lazy" />
+                    </div>
+                  </div>
+                  <h4 className="font-condensed font-bold text-white text-sm leading-tight mb-0.5">{member.name}</h4>
+                  <p className="text-primary text-[11px] uppercase tracking-wide leading-tight">{member.role}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

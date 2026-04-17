@@ -121,6 +121,15 @@
   .animate-marquee {
     animation: marquee 15s linear infinite;
   }
+
+  /* Scroll X Animation for Carousels */
+  @keyframes scroll-x {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-scroll-x {
+    animation: scroll-x 30s linear infinite;
+  }
 }
 
 ::-webkit-scrollbar { width: 8px; }

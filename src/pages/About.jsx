@@ -208,12 +208,13 @@ export default function About() {
       </section>
 
       {/* Accreditations */}
-      <section className="py-14 bg-dark border-y border-grey/20">
+      <section className="py-14 bg-dark border-y border-grey/20 overflow-hidden">
         <div className="container-custom px-4">
           <div className="text-center mb-10">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">Accreditations &amp; Certifications</span>
           </div>
-          <div className="flex flex-wrap justify-center gap-4 lg:gap-6 mb-14">
+          {/* Desktop: Grid */}
+          <div className="hidden lg:flex flex-wrap justify-center gap-4 lg:gap-6 mb-14">
             {ACCREDITATIONS.map((a, i) => (
               <motion.div key={a.name} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.35, delay: i * 0.07 }}>
                 <motion.div className="w-28 h-20 bg-dark-lighter rounded-xl p-3 flex items-center justify-center shadow-sm cursor-default border border-grey/30"
@@ -223,11 +224,22 @@ export default function About() {
               </motion.div>
             ))}
           </div>
+          {/* Mobile/Tablet: Scrolling Carousel */}
+          <div className="lg:hidden relative mb-14">
+            <div className="flex gap-4 animate-scroll-x">
+              {[...ACCREDITATIONS, ...ACCREDITATIONS].map((a, i) => (
+                <div key={`${a.name}-${i}`} className="flex-shrink-0 w-28 h-20 bg-dark-lighter rounded-xl p-3 flex items-center justify-center shadow-sm border border-grey/30">
+                  <img src={a.img} alt={a.name} className="max-w-full max-h-full object-contain" loading="lazy" />
+                </div>
+              ))}
+            </div>
+          </div>
 
           <div className="text-center mb-8">
             <span className="text-grey-text text-sm uppercase tracking-wider">Trusted by</span>
           </div>
-          <div className="flex flex-wrap justify-center gap-4 lg:gap-8">
+          {/* Desktop: Grid */}
+          <div className="hidden lg:flex flex-wrap justify-center gap-4 lg:gap-8">
             {PARTNERS.map((p, i) => (
               <motion.div key={p.name} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.35, delay: i * 0.07 }}>
                 <motion.div className="h-14 w-28 bg-white rounded-lg flex items-center justify-center cursor-default shadow-sm overflow-hidden"
@@ -236,6 +248,16 @@ export default function About() {
                 </motion.div>
               </motion.div>
             ))}
+          </div>
+          {/* Mobile/Tablet: Scrolling Carousel */}
+          <div className="lg:hidden relative">
+            <div className="flex gap-4 animate-scroll-x">
+              {[...PARTNERS, ...PARTNERS].map((p, i) => (
+                <div key={`${p.name}-${i}`} className="flex-shrink-0 h-14 w-28 bg-white rounded-lg flex items-center justify-center shadow-sm overflow-hidden">
+                  <img src={p.img} alt={p.name} className="w-[140%] h-[140%] object-contain" loading="lazy" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
