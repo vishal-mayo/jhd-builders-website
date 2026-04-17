@@ -38,22 +38,25 @@
     fill: none;
     stroke: currentColor;
     stroke-width: 2;
-    stroke-dasharray: 512, 0;
+    stroke-dasharray: 592, 0;
     stroke-dashoffset: 0;
     transition: all 0.5s ease-out;
   }
   .btn-codepen:hover rect {
     stroke-width: 4;
-    stroke-dasharray: 21, 491;
-    stroke-dashoffset: -344;
+    stroke-dasharray: 21, 571;
+    stroke-dashoffset: -424;
   }
 
   /* CodePen btn-1 Style - White border */
   .btn-codepen-white {
     @apply relative inline-block text-center uppercase tracking-wider text-white font-normal;
-    width: 200px;
+    width: 240px;
     height: 56px;
     line-height: 56px;
+  }
+  .btn-codepen-white svg rect {
+    width: 240px;
   }
   .btn-codepen-white:hover {
     @apply font-bold;
@@ -69,14 +72,14 @@
     fill: none;
     stroke: currentColor;
     stroke-width: 2;
-    stroke-dasharray: 512, 0;
+    stroke-dasharray: 592, 0;
     stroke-dashoffset: 0;
     transition: all 0.5s ease-out;
   }
   .btn-codepen-white:hover rect {
     stroke-width: 4;
-    stroke-dasharray: 21, 491;
-    stroke-dashoffset: -344;
+    stroke-dasharray: 21, 571;
+    stroke-dashoffset: -424;
   }
 
   /* Nav Button - Smaller version */
