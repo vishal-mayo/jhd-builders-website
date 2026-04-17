@@ -10,6 +10,8 @@ const navLinks = [
   { name: 'Contact', href: '/contact' },
 ]
 
+const JHD_LOGO = 'https://jhdbuilders.com/wp-content/uploads/2022/11/jhd-builders-limited-logo-1x.png'
+
 function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -25,8 +27,8 @@ function Navigation() {
 
   return (
     <>
-      <motion.nav 
-        initial={{ y: -100 }} 
+      <motion.nav
+        initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled ? 'bg-dark/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
@@ -35,14 +37,11 @@ function Navigation() {
         <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <Link to="/" className="flex items-center gap-3">
-              <img 
-                src="/images/logo.png" 
-                alt="JHD Builders Limited" 
+              <img
+                src={JHD_LOGO}
+                alt="JHD Builders Limited"
                 className="h-14 w-auto"
               />
-              <span className="font-condensed font-bold text-xl text-white hidden sm:block">
-                JHD Builders
-              </span>
             </Link>
 
             <div className="hidden lg:flex items-center gap-8">
@@ -56,9 +55,9 @@ function Navigation() {
                 >
                   {link.name}
                   {isActive(link.href) && (
-                    <motion.div 
-                      layoutId="navUnderline" 
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary" 
+                    <motion.div
+                      layoutId="navUnderline"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary"
                     />
                   )}
                 </Link>
@@ -67,15 +66,13 @@ function Navigation() {
 
             <div className="hidden lg:block">
               <Link to="/contact" className="btn-codepen-nav">
-                <svg>
-                  <rect x="0" y="0" width="140" height="48" />
-                </svg>
+                <svg><rect x="0" y="0" width="140" height="48" /></svg>
                 Get Quote
               </Link>
             </div>
 
-            <button 
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} 
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="lg:hidden p-2 text-white"
             >
               <div className="w-6 h-5 relative flex flex-col justify-between">
@@ -99,6 +96,7 @@ function Navigation() {
             <div className="absolute inset-0 bg-black/50" onClick={() => setIsMobileMenuOpen(false)} />
             <motion.div className="absolute right-0 top-0 bottom-0 w-80 bg-dark-lighter shadow-2xl">
               <div className="p-6 pt-24">
+                <img src={JHD_LOGO} alt="JHD Builders" className="h-12 w-auto mb-6" />
                 {navLinks.map((link, index) => (
                   <motion.div
                     key={link.name}

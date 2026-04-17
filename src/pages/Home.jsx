@@ -23,26 +23,43 @@ function CountUp({ to, suffix = '', duration = 2000 }) {
   return <span ref={ref}>{count}{suffix}</span>
 }
 
-const testimonials = [
-  {
-    quote: "We had four building companies quoting for our loft. We chose JHD Builders because we liked the way they clearly specified all of the jobs in the quote and their price was very competitive. The project took exactly 9 weeks as estimated, and the job was done to a high standard.",
-    author: "Sarah M.", project: "Loft Conversion"
-  },
-  {
-    quote: "JHD Builders carried out a full refurbishment of our property and the quality of work was outstanding. Professional, tidy and completed on time and on budget. I wouldn't hesitate to recommend them to anyone looking for a reliable building contractor in London.",
-    author: "James T.", project: "Property Refurbishment"
-  },
-  {
-    quote: "As a landlord managing multiple properties across London, I've worked with JHD Builders for years. Their fire door installation service is second to none and their team respond quickly to any issues. An absolute pleasure to work with.",
-    author: "David K.", project: "Fire Door Installation"
-  }
+const TEAM = [
+  { name: 'Jason Donnelly', role: 'Director & Co-Founder', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-jason-donnelly-jhd-builders-co-founder-and-director.jpg' },
+  { name: 'Natalie Donnelly', role: 'Administration', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/natalie-donnelly-jhd-builders-1.jpg' },
+  { name: 'Sian Condon', role: 'Administration', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-sian-condon-jhd-builders-administration.jpg' },
+  { name: 'Paul "Laz" Lazarou', role: 'Driver', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-paul-lazarou-jhd-builders-driver.jpg' },
+  { name: 'Rafik Mohammed', role: 'Multi Trader', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-rafik-mohamed-jhd-builders-multi-trader.jpg' },
+  { name: 'Christian Pinzariu', role: 'Multi Trader', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-christian-pinzariu-jhd-builders-bm-trada-operative-and-multi-trader.jpg' },
+  { name: 'Chris Hendricks', role: 'Multi Trader', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/chris-hendricks-jhd-builders-multi-trader.jpg' },
+  { name: 'Marcin Twarowski', role: 'Multi Trader', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/marcin-twarowski-jhd-builders-multi-trader.jpg' },
+  { name: 'Ryan Cleaver', role: 'Groundsman', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-ryan-cleaver-jhd-builders-groundsmen.jpg' },
+  { name: 'Alfie Wisker', role: 'Labourer', img: 'https://jhdbuilders.com/wp-content/uploads/2024/08/alife-wisker-labourer-jhd-builders.png' },
+  { name: 'Scott Pearce', role: 'Painter & Decorator', img: 'https://jhdbuilders.com/wp-content/uploads/2024/06/Scott-Pearce-JHD-Builders.jpg' },
+  { name: 'Harold Castsno', role: 'Painter & Decorator', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-harold-castsno-jhd-builders-painter-and-decorator.jpg' },
+  { name: 'Fabrizio Romero', role: 'Painter & Decorator', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-fabrizio-romero-jhd-builders-painter-and-decorator.jpg' },
+  { name: 'Harry Donnelly', role: 'BM Trada Trainee', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-harry-donnelly-jhd-builders-trainee-bm-trada-operative.jpg' },
+  { name: 'Ashley Edwards', role: 'Electrician', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-ashley-edwards-jhd-builders-1.jpg' },
+  { name: 'Craig Gough', role: 'Pest Control', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/craig-gough-jhd-builder-pest-control.jpg' },
+  { name: 'Mickey Andrews', role: 'Plumber', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/mickey-andrews-jhd-builders-plumber.jpg' },
+  { name: 'King Arthur', role: 'Head of Security', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/king-arthur-jhd-builders-head-of-security.jpg' },
+  { name: 'Miss Ruby Sparkles', role: 'Security', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/miss-ruby-sparkles-jhd-builders-security.jpg' },
+  { name: 'Brockley', role: 'Company Mascot', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/brockey-jhd-builders-company-mascot.jpg' },
 ]
 
-const accreditations = [
-  { name: 'CHAS', full: 'Contractors Health & Safety Assessment Scheme' },
-  { name: 'Constructionline', full: 'Construction Pre-Qualification' },
-  { name: 'Builders Profile', full: 'Industry Standard Accreditation' },
-  { name: 'BM Trada', full: 'Fire Door Certification' },
+const ACCREDITATIONS = [
+  { name: 'CHAS', img: 'https://jhdbuilders.com/wp-content/uploads/2022/10/chas.png' },
+  { name: 'Constructionline', img: 'https://jhdbuilders.com/wp-content/uploads/2022/10/construction-line.png' },
+  { name: 'Builders Profile', img: 'https://jhdbuilders.com/wp-content/uploads/2022/10/builders-profile.png' },
+  { name: 'BM Trada', img: 'https://jhdbuilders.com/wp-content/uploads/2024/08/bm-trada-registered-business-jhd-builders.png' },
+  { name: 'Safe Contractor', img: 'https://jhdbuilders.com/wp-content/uploads/2025/01/safe-contractor-approved-jhd-builders.png' },
+  { name: 'Gas Safe', img: 'https://jhdbuilders.com/wp-content/uploads/2024/05/gas-safe-registered-jhd-builders.png' },
+  { name: 'CIOB', img: 'https://jhdbuilders.com/wp-content/uploads/2022/11/ciob-jhd-builders.jpg' },
+]
+
+const testimonials = [
+  { quote: "We had four building companies quoting for our loft. We chose JHD Builders because we liked the way they clearly specified all of the jobs in the quote and their price was very competitive. The project took exactly 9 weeks as estimated, and the job was done to a high standard.", author: "Sarah M.", project: "Loft Conversion" },
+  { quote: "JHD Builders carried out a full refurbishment of our property and the quality of work was outstanding. Professional, tidy and completed on time and on budget. I wouldn't hesitate to recommend them to anyone looking for a reliable building contractor in London.", author: "James T.", project: "Property Refurbishment" },
+  { quote: "As a landlord managing multiple properties across London, I've worked with JHD Builders for years. Their fire door installation service is second to none and their team respond quickly to any issues. An absolute pleasure to work with.", author: "David K.", project: "Fire Door Installation" },
 ]
 
 export default function Home() {
@@ -69,50 +86,31 @@ export default function Home() {
         <div className="container-custom px-4 sm:px-6 lg:px-8 relative z-10 pt-20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.p
-              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
               className="text-primary font-semibold text-sm uppercase tracking-widest mb-4"
-            >
-              30+ Years of Building Excellence in London
-            </motion.p>
+            >30+ Years of Building Excellence in London</motion.p>
             <motion.h1
-              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
               className="font-condensed text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 uppercase tracking-wider"
-            >
-              Commercial &amp; Property Building Specialist
-            </motion.h1>
+            >Commercial &amp; Property Building Specialist</motion.h1>
             <motion.div
-              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-6 justify-center"
             >
-              <Link to="/contact" className="btn-codepen">
-                <svg><rect x="0" y="0" width="200" height="56" /></svg>
-                Contact Us
-              </Link>
-              <Link to="/services" className="btn-codepen-white">
-                <svg><rect x="0" y="0" width="200" height="56" /></svg>
-                Our Services
-              </Link>
+              <Link to="/contact" className="btn-codepen"><svg><rect x="0" y="0" width="200" height="56" /></svg>Contact Us</Link>
+              <Link to="/services" className="btn-codepen-white"><svg><rect x="0" y="0" width="200" height="56" /></svg>Our Services</Link>
             </motion.div>
           </div>
         </div>
-        <motion.div
-          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }}
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+          <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }}
             className="flex flex-col items-center cursor-pointer"
-            onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
-          >
+            onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}>
             <span className="text-white/60 text-sm mb-2 uppercase tracking-wider">Scroll Down</span>
             <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center pt-2">
-              <motion.div
-                animate={{ y: [0, 12, 0] }} transition={{ duration: 2, repeat: Infinity }}
-                className="w-1.5 h-1.5 bg-primary rounded-full"
-              />
+              <motion.div animate={{ y: [0, 12, 0] }} transition={{ duration: 2, repeat: Infinity }}
+                className="w-1.5 h-1.5 bg-primary rounded-full" />
             </div>
           </motion.div>
         </motion.div>
@@ -142,38 +140,21 @@ export default function Home() {
       <section id="about" className="section-padding bg-darker">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }} transition={{ duration: 0.6 }}
-            >
+            <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">About Us</span>
               <h2 className="font-condensed text-4xl lg:text-5xl font-bold text-white mb-6 uppercase">Who We Are</h2>
               <div className="space-y-4 text-grey-text text-lg leading-relaxed">
-                <p>
-                  We are a building contractor who, over the past 30 years have worked with local authorities
-                  carrying out a large range of works. We are the main contractor for one of the UK&#39;s largest
-                  private landlords in London supporting them with external works, refurbishments, relets,
-                  fencing and disability adaptations.
-                </p>
-                <p>
-                  We aim to deliver above and beyond expectations. Our team are highly trained and take pride
-                  in their work, ensuring every project is completed to the highest standard.
-                </p>
+                <p>We are a building contractor who, over the past 30 years have worked with local authorities carrying out a large range of works. We are the main contractor for one of the UK&#39;s largest private landlords in London supporting them with external works, refurbishments, relets, fencing and disability adaptations.</p>
+                <p>We aim to deliver above and beyond expectations. Our team are highly trained and take pride in their work, ensuring every project is completed to the highest standard.</p>
               </div>
               <Link to="/about" className="inline-flex items-center gap-2 text-primary font-semibold mt-6 hover:gap-4 transition-all uppercase tracking-wider">
                 Learn More
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
-            >
+            <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="relative">
               <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                <img src="/images/hero-bg.jpg" alt="JHD Builders construction work" className="w-full h-full object-cover" />
+                <img src="https://jhdbuilders.com/wp-content/uploads/2024/06/meet-brockley-the-dog-jhd-builders-mascot.png" alt="JHD Builders" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-primary p-6 rounded-lg shadow-2xl">
                 <div className="text-5xl font-bold text-white">30+</div>
@@ -194,11 +175,7 @@ export default function Home() {
               { static: '15\u201320', label: 'Skilled Operatives' },
               { to: 100, suffix: '%', label: 'Client Satisfaction' },
             ].map((stat, i) => (
-              <motion.div key={stat.label}
-                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="text-center p-6"
-              >
+              <motion.div key={stat.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="text-center p-6">
                 <div className="font-condensed text-5xl font-bold text-primary mb-2">
                   {stat.to !== undefined ? <CountUp to={stat.to} suffix={stat.suffix} /> : stat.static}
                 </div>
@@ -212,41 +189,21 @@ export default function Home() {
       {/* Services — wheel + side panel */}
       <section className="section-padding bg-dark">
         <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }} transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-16"
-          >
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">Our Services</span>
             <h2 className="font-condensed text-4xl lg:text-5xl font-bold text-white mb-4 uppercase">What We Offer</h2>
             <p className="text-grey-text text-lg">Click any service to explore — or browse all services in detail.</p>
           </motion.div>
-
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Left: Wheel */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }} transition={{ duration: 0.6 }}
-            >
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <ServicesWheel selected={selectedService} onSelect={setSelectedService} />
             </motion.div>
-
-            {/* Right: Panel */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}
-              className="lg:sticky lg:top-28"
-            >
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }} className="lg:sticky lg:top-28">
               <AnimatePresence mode="wait">
                 {selectedService ? (
-                  <motion.div key={selectedService.id}
-                    initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }}
-                    transition={{ duration: 0.25 }}
-                    className="bg-dark-lighter rounded-2xl p-8 border"
-                    style={{ borderColor: `${selectedService.color}40` }}
-                  >
-                    <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5"
-                      style={{ backgroundColor: `${selectedService.color}18` }}>
+                  <motion.div key={selectedService.id} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.25 }}
+                    className="bg-dark-lighter rounded-2xl p-8 border" style={{ borderColor: `${selectedService.color}40` }}>
+                    <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5" style={{ backgroundColor: `${selectedService.color}18` }}>
                       <selectedService.Icon size={32} color={selectedService.color} />
                     </div>
                     <h3 className="font-condensed text-3xl font-bold text-white mb-3 uppercase">{selectedService.title}</h3>
@@ -254,33 +211,24 @@ export default function Home() {
                     <div className="flex flex-wrap gap-2 mb-6">
                       {selectedService.features.map(f => (
                         <span key={f} className="px-3 py-1 rounded-full text-xs border text-white/80"
-                          style={{ borderColor: `${selectedService.color}50`, backgroundColor: `${selectedService.color}10` }}>
-                          {f}
-                        </span>
+                          style={{ borderColor: `${selectedService.color}50`, backgroundColor: `${selectedService.color}10` }}>{f}</span>
                       ))}
                     </div>
-                    <Link
-                      to={`/services/${selectedService.slug}`}
+                    <Link to={`/services/${selectedService.slug}`}
                       className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider hover:gap-4 transition-all"
-                      style={{ color: selectedService.color }}
-                    >
+                      style={{ color: selectedService.color }}>
                       View Full Details <ArrowRight size={14} />
                     </Link>
                   </motion.div>
                 ) : (
-                  <motion.div key="default"
-                    initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
+                  <motion.div key="default" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}>
                     <h3 className="font-condensed text-2xl font-bold text-white mb-2 uppercase">7 Specialist Services</h3>
                     <p className="text-grey-text text-sm mb-6">Select a service from the diagram or click below to explore.</p>
                     <ul className="space-y-1">
                       {SERVICES.map(s => (
                         <li key={s.id}>
-                          <button
-                            onClick={() => setSelectedService(s)}
-                            className="flex items-center gap-3 w-full text-left group px-3 py-2.5 rounded-lg hover:bg-dark-lighter transition-colors"
-                          >
+                          <button onClick={() => setSelectedService(s)}
+                            className="flex items-center gap-3 w-full text-left group px-3 py-2.5 rounded-lg hover:bg-dark-lighter transition-colors">
                             <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: s.color }} />
                             <span className="text-white/80 group-hover:text-white transition-colors text-sm font-medium flex-1">{s.title}</span>
                             <ArrowRight size={13} className="text-grey opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -289,8 +237,7 @@ export default function Home() {
                       ))}
                     </ul>
                     <div className="mt-6 pt-6 border-t border-grey/20">
-                      <Link to="/services"
-                        className="inline-flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-wider hover:gap-4 transition-all">
+                      <Link to="/services" className="inline-flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-wider hover:gap-4 transition-all">
                         Browse All Services <ArrowRight size={14} />
                       </Link>
                     </div>
@@ -305,49 +252,28 @@ export default function Home() {
       {/* Testimonials */}
       <section className="section-padding bg-primary">
         <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }} transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center max-w-4xl mx-auto">
             <span className="text-white/80 font-semibold text-sm uppercase tracking-wider mb-4 block">Testimonials</span>
             <h2 className="font-condensed text-4xl lg:text-5xl font-bold text-white mb-12 uppercase">What Our Clients Say</h2>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12">
               <div className="flex justify-center gap-1 mb-6">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-7 h-7 text-white fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                ))}
+                {[...Array(5)].map((_, i) => (<svg key={i} className="w-7 h-7 text-white fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>))}
               </div>
               <AnimatePresence mode="wait">
-                <motion.div key={currentTestimonial}
-                  initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.35 }}
-                >
-                  <blockquote className="text-white text-lg md:text-xl leading-relaxed mb-6">
-                    &ldquo;{testimonials[currentTestimonial].quote}&rdquo;
-                  </blockquote>
+                <motion.div key={currentTestimonial} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.35 }}>
+                  <blockquote className="text-white text-lg md:text-xl leading-relaxed mb-6">&ldquo;{testimonials[currentTestimonial].quote}&rdquo;</blockquote>
                   <p className="text-white font-semibold text-lg">{testimonials[currentTestimonial].author}</p>
                   <p className="text-white/70">{testimonials[currentTestimonial].project}</p>
                 </motion.div>
               </AnimatePresence>
               <div className="flex items-center justify-center gap-4 mt-8">
                 <button onClick={() => setCurrentTestimonial(p => (p - 1 + testimonials.length) % testimonials.length)}
-                  className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-white transition-colors">
-                  <ChevronLeft size={18} />
-                </button>
+                  className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-white transition-colors"><ChevronLeft size={18} /></button>
                 <div className="flex gap-2">
-                  {testimonials.map((_, i) => (
-                    <button key={i} onClick={() => setCurrentTestimonial(i)}
-                      className="w-2 h-2 rounded-full transition-all duration-300"
-                      style={{ backgroundColor: i === currentTestimonial ? 'white' : 'rgba(255,255,255,0.35)' }} />
-                  ))}
+                  {testimonials.map((_, i) => (<button key={i} onClick={() => setCurrentTestimonial(i)} className="w-2 h-2 rounded-full transition-all duration-300" style={{ backgroundColor: i === currentTestimonial ? 'white' : 'rgba(255,255,255,0.35)' }} />))}
                 </div>
                 <button onClick={() => setCurrentTestimonial(p => (p + 1) % testimonials.length)}
-                  className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-white transition-colors">
-                  <ChevronRight size={18} />
-                </button>
+                  className="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-white transition-colors"><ChevronRight size={18} /></button>
               </div>
             </div>
           </motion.div>
@@ -357,28 +283,22 @@ export default function Home() {
       {/* Accreditations */}
       <section className="py-14 bg-darker border-y border-grey/20">
         <div className="container-custom px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="text-center mb-10"
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-10">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">Accreditations &amp; Certifications</span>
           </motion.div>
-          <div className="flex flex-wrap justify-center gap-6 lg:gap-12">
-            {accreditations.map((a, i) => (
+          <div className="flex flex-wrap justify-center gap-4 lg:gap-6">
+            {ACCREDITATIONS.map((a, i) => (
               <motion.div key={a.name}
-                initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="group flex flex-col items-center gap-2"
+                initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }} transition={{ duration: 0.35, delay: i * 0.07 }}
               >
                 <motion.div
-                  className="w-24 h-24 rounded-xl bg-dark border border-grey/30 flex items-center justify-center"
-                  whileHover={{ borderColor: '#6db44c', y: -2 }} transition={{ duration: 0.2 }}
+                  className="w-28 h-20 bg-white rounded-xl p-3 flex items-center justify-center shadow-sm cursor-default"
+                  whileHover={{ y: -3, boxShadow: '0 8px 24px rgba(109,180,76,0.2)' }}
+                  transition={{ duration: 0.2 }}
                 >
-                  <span className="font-condensed font-bold text-white text-sm group-hover:text-primary transition-colors text-center leading-tight px-2">
-                    {a.name}
-                  </span>
+                  <img src={a.img} alt={a.name} className="max-w-full max-h-full object-contain" loading="lazy" />
                 </motion.div>
-                <span className="text-grey-text text-xs text-center max-w-[100px] leading-snug">{a.full}</span>
               </motion.div>
             ))}
           </div>
@@ -388,37 +308,33 @@ export default function Home() {
       {/* Team */}
       <section className="section-padding bg-darker">
         <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }} transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-16"
-          >
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto mb-14">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">Our Team</span>
-            <h2 className="font-condensed text-4xl lg:text-5xl font-bold text-white mb-6 uppercase">Meet The Team</h2>
-            <p className="text-grey-text text-lg">A dedicated team with decades of experience delivering quality building services across London.</p>
+            <h2 className="font-condensed text-4xl lg:text-5xl font-bold text-white mb-4 uppercase">Meet The Team</h2>
+            <p className="text-grey-text">20 dedicated professionals bringing decades of combined expertise to every project.</p>
           </motion.div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            {[
-              { name: 'Jason Donnelly', role: 'Director & Co-Founder', note: 'BM Trada Operative', img: '/images/team-jason.jpg' },
-              { name: 'Paul "Laz" Lazarou', role: 'Delivery Driver', note: '15+ years with the team', img: '/images/team-laz.jpg' },
-              { name: 'Brockley', role: 'Chief Morale Officer', note: 'Our beloved mascot \ud83d\udc3e', img: '/images/brockley.png' },
-            ].map((member, i) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            {TEAM.map((member, i) => (
               <motion.div key={member.name}
-                initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.15 }}
+                initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }} transition={{ duration: 0.4, delay: (i % 5) * 0.07 }}
                 className="text-center group"
               >
-                <motion.div className="relative mb-4 mx-auto w-40 h-40"
-                  whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300, damping: 20 }}>
-                  <div className="w-full h-full rounded-full overflow-hidden border-4 border-dark-lighter group-hover:border-primary transition-colors duration-300 shadow-xl bg-dark-lighter">
-                    <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
+                <motion.div className="relative mx-auto mb-3 w-20 h-20"
+                  whileHover={{ scale: 1.08 }} transition={{ type: 'spring', stiffness: 300, damping: 20 }}>
+                  <div className="w-full h-full rounded-full overflow-hidden border-2 border-grey/30 group-hover:border-primary transition-colors duration-300 bg-dark-lighter">
+                    <img src={member.img} alt={member.name} className="w-full h-full object-cover" loading="lazy" />
                   </div>
                 </motion.div>
-                <h3 className="font-condensed text-xl font-bold text-white mb-1">{member.name}</h3>
-                <p className="text-primary text-sm uppercase tracking-wider mb-1">{member.role}</p>
-                <p className="text-grey-text text-xs">{member.note}</p>
+                <h4 className="font-condensed font-bold text-white text-sm leading-tight mb-0.5">{member.name}</h4>
+                <p className="text-primary text-[11px] uppercase tracking-wide leading-tight">{member.role}</p>
               </motion.div>
             ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link to="/about" className="inline-flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-wider hover:gap-4 transition-all">
+              Full team profiles on About <ArrowRight size={14} />
+            </Link>
           </div>
         </div>
       </section>
@@ -426,16 +342,10 @@ export default function Home() {
       {/* CTA */}
       <section className="section-padding bg-dark">
         <div className="container-custom text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }} transition={{ duration: 0.6 }}
-          >
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <h2 className="font-condensed text-3xl lg:text-4xl font-bold text-white mb-6 uppercase">Ready to Start Your Project?</h2>
             <p className="text-grey-text text-lg mb-8 max-w-2xl mx-auto">Contact us today to discuss your project with a member of our team.</p>
-            <Link to="/contact" className="btn-codepen">
-              <svg><rect x="0" y="0" width="200" height="56" /></svg>
-              Get Free Quote
-            </Link>
+            <Link to="/contact" className="btn-codepen"><svg><rect x="0" y="0" width="200" height="56" /></svg>Get Free Quote</Link>
           </motion.div>
         </div>
       </section>
