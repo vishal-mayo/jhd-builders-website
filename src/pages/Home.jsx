@@ -204,8 +204,8 @@ export default function Home() {
       </section>
 
       {/* Services — wheel + side panel */}
-      <section className="section-padding bg-dark">
-        <div className="container-custom">
+      <section className="py-20 px-6 sm:px-8 lg:px-8 bg-dark">
+        <div className="container-custom px-2 sm:px-4 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">Our Services</span>
             <h2 className="font-condensed text-4xl lg:text-5xl font-bold text-white mb-4 uppercase">What We Offer</h2>
