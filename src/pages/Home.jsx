@@ -76,11 +76,23 @@ export default function Home() {
       {/* Hero */}
       <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 w-full h-full">
+          <div 
+            className="absolute inset-0"
+            style={{ 
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              width: '177.77777778vh',
+              height: '100vh',
+              minWidth: '100vw',
+              minHeight: '56.25vw',
+              transform: 'translate(-50%, -50%)'
+            }}
+          >
             <iframe
               src="https://player.vimeo.com/video/945934477?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
               className="w-full h-full"
-              style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}
+              style={{ width: '100%', height: '100%', border: 'none' }}
               frameBorder="0" allow="autoplay; fullscreen" allowFullScreen
             />
           </div>
