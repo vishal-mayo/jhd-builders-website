@@ -63,7 +63,7 @@ function Contact() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-darker overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
-        <div className="container-custom px-4 relative z-10">
+        <div className="container-custom relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -83,7 +83,7 @@ function Contact() {
 
       {/* Contact Info Cards */}
       <section className="py-16 bg-dark">
-        <div className="container-custom px-4">
+        <div className="container-custom">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactInfo.map((info, index) => (
               <motion.div
@@ -109,7 +109,7 @@ function Contact() {
 
       {/* Contact Form & Team */}
       <section className="section-padding bg-darker">
-        <div className="container-custom px-4">
+        <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Form */}
             <motion.div

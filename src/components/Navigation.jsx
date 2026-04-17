@@ -36,13 +36,13 @@ function Navigation() {
       >
         <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <Link to="/" className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3 z-50 relative">
               <img
                 src={JHD_LOGO}
                 alt="JHD Builders Limited"
                 className="h-14 w-auto"
               />
-              <span className="font-condensed font-bold text-xl text-white">JHD Builders</span>
+              <span className={`font-condensed font-bold text-xl text-white transition-opacity ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}>JHD Builders</span>
             </Link>
 
             <div className="hidden lg:flex items-center gap-8">
