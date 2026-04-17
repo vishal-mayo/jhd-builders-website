@@ -116,7 +116,7 @@ export default function Home() {
             >Commercial &amp; Property Building Specialist</motion.h1>
             <motion.div
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center"
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             >
               <Link to="/contact" className="btn-codepen"><svg><rect x="0" y="0" width="240" height="56" /></svg>Contact Us</Link>
               <Link to="/services" className="btn-codepen-white"><svg><rect x="0" y="0" width="240" height="56" /></svg>Our Services</Link>
