@@ -46,13 +46,15 @@ function Contact() {
       name: 'Sian',
       role: 'Office Manager',
       phone: '020 8446 3447',
-      email: 'sian@jhdbuilders.com'
+      email: 'sian@jhdbuilders.com',
+      img: '/images/team/sian-condon.jpg'
     },
     {
       name: 'Harry',
       role: 'Project Manager',
       phone: '07956 293612',
-      email: 'harry@jhdbuilders.com'
+      email: 'harry@jhdbuilders.com',
+      img: '/images/team/harry-donnelly.jpg'
     }
   ]
 
@@ -205,8 +207,8 @@ function Contact() {
                       className="bg-dark-lighter p-6 rounded-xl border border-grey/20"
                     >
                       <div className="flex items-start gap-4">
-                        <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary text-2xl font-bold">
-                          {member.name[0]}
+                        <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/30">
+                          <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
                         </div>
                         <div>
                           <h3 className="font-condensed text-xl font-bold text-white">{member.name}</h3>
