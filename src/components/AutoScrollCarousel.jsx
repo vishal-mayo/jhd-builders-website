@@ -13,7 +13,7 @@ export default function AutoScrollCarousel({ children, className = '', gap = 16,
     if (!container) return;
 
     let lastTime = Date.now();
-    const pixelsPerSecond = 50; // Scroll speed
+    const pixelsPerSecond = 150; // Scroll speed - faster
 
     const animate = () => {
       if (!isPausedRef.current && !isDragging) {
@@ -88,21 +88,13 @@ export default function AutoScrollCarousel({ children, className = '', gap = 16,
       isPausedRef.current = false;
     };
 
-    const handleMouseEnter = () => {
-      isPausedRef.current = true;
-    };
 
-    const handleMouseLeave = () => {
-      if (!isDragging) {
-        isPausedRef.current = false;
-      }
-    };
 
     container.addEventListener('mousedown', handleMouseDown);
     container.addEventListener('mouseleave', handleMouseLeave);
     container.addEventListener('mouseup', handleMouseUp);
     container.addEventListener('mousemove', handleMouseMove);
-    container.addEventListener('mouseenter', handleMouseEnter);
+
     container.addEventListener('touchstart', handleTouchStart);
     container.addEventListener('touchmove', handleTouchMove);
     container.addEventListener('touchend', handleTouchEnd);
@@ -112,7 +104,7 @@ export default function AutoScrollCarousel({ children, className = '', gap = 16,
       container.removeEventListener('mouseleave', handleMouseLeave);
       container.removeEventListener('mouseup', handleMouseUp);
       container.removeEventListener('mousemove', handleMouseMove);
-      container.removeEventListener('mouseenter', handleMouseEnter);
+  
       container.removeEventListener('touchstart', handleTouchStart);
       container.removeEventListener('touchmove', handleTouchMove);
       container.removeEventListener('touchend', handleTouchEnd);
