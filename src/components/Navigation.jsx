@@ -10,7 +10,7 @@ const navLinks = [
   { name: 'Contact', href: '/contact' },
 ]
 
-const JHD_LOGO = 'https://jhdbuilders.com/wp-content/uploads/2022/11/jhd-builders-limited-logo-1x.png'
+const JHD_LOGO = '/images/logo.png'
 
 function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)

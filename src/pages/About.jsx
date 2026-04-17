@@ -6,71 +6,71 @@ const TEAM_CATEGORIES = [
   {
     label: 'Leadership',
     members: [
-      { name: 'Jason Donnelly', role: 'Director & Co-Founder', note: 'BM Trada Certified', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-jason-donnelly-jhd-builders-co-founder-and-director.jpg' },
+      { name: 'Jason Donnelly', role: 'Director & Co-Founder', note: 'BM Trada Certified', img: '/images/team/jason-donnelly.jpg' },
     ]
   },
   {
     label: 'Administration',
     members: [
-      { name: 'Natalie Donnelly', role: 'Administration', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/natalie-donnelly-jhd-builders-1.jpg' },
-      { name: 'Sian Condon', role: 'Administration', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-sian-condon-jhd-builders-administration.jpg' },
+      { name: 'Natalie Donnelly', role: 'Administration', img: '/images/team/natalie-donnelly.jpg' },
+      { name: 'Sian Condon', role: 'Administration', img: '/images/team/sian-condon.jpg' },
     ]
   },
   {
     label: 'Operations',
     members: [
-      { name: 'Paul "Laz" Lazarou', role: 'Driver', note: '15+ years with the company', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-paul-lazarou-jhd-builders-driver.jpg' },
-      { name: 'Rafik Mohammed', role: 'Multi Trader', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-rafik-mohamed-jhd-builders-multi-trader.jpg' },
-      { name: 'Christian Pinzariu', role: 'Multi Trader / BM Trada Trainee', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-christian-pinzariu-jhd-builders-bm-trada-operative-and-multi-trader.jpg' },
-      { name: 'Chris Hendricks', role: 'Multi Trader', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/chris-hendricks-jhd-builders-multi-trader.jpg' },
-      { name: 'Marcin Twarowski', role: 'Multi Trader', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/marcin-twarowski-jhd-builders-multi-trader.jpg' },
-      { name: 'Ryan Cleaver', role: 'Groundsman', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-ryan-cleaver-jhd-builders-groundsmen.jpg' },
-      { name: 'Alfie Wisker', role: 'Labourer', img: 'https://jhdbuilders.com/wp-content/uploads/2024/08/alife-wisker-labourer-jhd-builders.png' },
+      { name: 'Paul "Laz" Lazarou', role: 'Driver', note: '15+ years with the company', img: '/images/team/paul-lazarou.jpg' },
+      { name: 'Rafik Mohammed', role: 'Multi Trader', img: '/images/team/rafik-mohammed.jpg' },
+      { name: 'Christian Pinzariu', role: 'Multi Trader / BM Trada Trainee', img: '/images/team/christian-pinzariu.jpg' },
+      { name: 'Chris Hendricks', role: 'Multi Trader', img: '/images/team/chris-hendricks.jpg' },
+      { name: 'Marcin Twarowski', role: 'Multi Trader', img: '/images/team/marcin-twarowski.jpg' },
+      { name: 'Ryan Cleaver', role: 'Groundsman', img: '/images/team/ryan-cleaver.jpg' },
+      { name: 'Alfie Wisker', role: 'Labourer', img: '/images/team/alfie-wisker.png' },
     ]
   },
   {
     label: 'Painters & Decorators',
     members: [
-      { name: 'Scott Pearce', role: 'Painter & Decorator', img: 'https://jhdbuilders.com/wp-content/uploads/2024/06/Scott-Pearce-JHD-Builders.jpg' },
-      { name: 'Harold Castsno', role: 'Painter & Decorator', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-harold-castsno-jhd-builders-painter-and-decorator.jpg' },
-      { name: 'Fabrizio Romero', role: 'Painter & Decorator', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-fabrizio-romero-jhd-builders-painter-and-decorator.jpg' },
+      { name: 'Scott Pearce', role: 'Painter & Decorator', img: '/images/team/scott-pearce.jpg' },
+      { name: 'Harold Castsno', role: 'Painter & Decorator', img: '/images/team/harold-castsno.jpg' },
+      { name: 'Fabrizio Romero', role: 'Painter & Decorator', img: '/images/team/fabrizio-romero.jpg' },
     ]
   },
   {
     label: 'Specialists',
     members: [
-      { name: 'Harry Donnelly', role: 'Trainee BM Trada Operative', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-harry-donnelly-jhd-builders-trainee-bm-trada-operative.jpg' },
-      { name: 'Ashley Edwards', role: 'Electrician', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/meet-ashley-edwards-jhd-builders-1.jpg' },
-      { name: 'Craig Gough', role: 'Pest Control', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/craig-gough-jhd-builder-pest-control.jpg' },
-      { name: 'Mickey Andrews', role: 'Plumber', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/mickey-andrews-jhd-builders-plumber.jpg' },
+      { name: 'Harry Donnelly', role: 'Trainee BM Trada Operative', img: '/images/team/harry-donnelly.jpg' },
+      { name: 'Ashley Edwards', role: 'Electrician', img: '/images/team/ashley-edwards.jpg' },
+      { name: 'Craig Gough', role: 'Pest Control', img: '/images/team/craig-gough.jpg' },
+      { name: 'Mickey Andrews', role: 'Plumber', img: '/images/team/mickey-andrews.jpg' },
     ]
   },
   {
     label: 'Security & Mascots \ud83d\udc3e',
     members: [
-      { name: 'King Arthur', role: 'Head of Security', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/king-arthur-jhd-builders-head-of-security.jpg' },
-      { name: 'Miss Ruby Sparkles', role: 'Security', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/miss-ruby-sparkles-jhd-builders-security.jpg' },
-      { name: 'Brockley', role: 'Company Mascot', note: 'Our beloved Cocker Spaniel', img: 'https://jhdbuilders.com/wp-content/uploads/2024/07/brockey-jhd-builders-company-mascot.jpg' },
+      { name: 'King Arthur', role: 'Head of Security', img: '/images/team/king-arthur.jpg' },
+      { name: 'Miss Ruby Sparkles', role: 'Security', img: '/images/team/miss-ruby-sparkles.jpg' },
+      { name: 'Brockley', role: 'Company Mascot', note: 'Our beloved Cocker Spaniel', img: '/images/team/brockley.jpg' },
     ]
   },
 ]
 
 const ACCREDITATIONS = [
-  { name: 'CHAS', img: 'https://jhdbuilders.com/wp-content/uploads/2022/10/chas.png' },
-  { name: 'Constructionline', img: 'https://jhdbuilders.com/wp-content/uploads/2022/10/construction-line.png' },
-  { name: 'Builders Profile', img: 'https://jhdbuilders.com/wp-content/uploads/2022/10/builders-profile.png' },
-  { name: 'BM Trada', img: 'https://jhdbuilders.com/wp-content/uploads/2024/08/bm-trada-registered-business-jhd-builders.png' },
-  { name: 'Safe Contractor', img: 'https://jhdbuilders.com/wp-content/uploads/2025/01/safe-contractor-approved-jhd-builders.png' },
-  { name: 'Gas Safe', img: 'https://jhdbuilders.com/wp-content/uploads/2024/05/gas-safe-registered-jhd-builders.png' },
-  { name: 'CIOB', img: 'https://jhdbuilders.com/wp-content/uploads/2022/11/ciob-jhd-builders.jpg' },
+  { name: 'CHAS', img: '/images/accreditations/chas.png' },
+  { name: 'Constructionline', img: '/images/accreditations/constructionline.png' },
+  { name: 'Builders Profile', img: '/images/accreditations/builders-profile.png' },
+  { name: 'BM Trada', img: '/images/accreditations/bm-trada.png' },
+  { name: 'Safe Contractor', img: '/images/accreditations/safe-contractor.png' },
+  { name: 'Gas Safe', img: '/images/accreditations/gas-safe.png' },
+  { name: 'CIOB', img: '/images/accreditations/ciob.jpg' },
 ]
 
 const PARTNERS = [
-  { name: 'Camden Council', img: 'https://jhdbuilders.com/wp-content/uploads/2022/10/camden-logo-jpg.jpg' },
-  { name: 'Brent Council', img: 'https://jhdbuilders.com/wp-content/uploads/2022/10/brent-logo-jpg.jpg' },
-  { name: 'Osborne', img: 'https://jhdbuilders.com/wp-content/uploads/2022/10/osborne-logo-jpg.jpg' },
-  { name: 'Citywest Homes', img: 'https://jhdbuilders.com/wp-content/uploads/2022/10/citywest-homes-logo-jpg.jpg' },
-  { name: 'Wates', img: 'https://jhdbuilders.com/wp-content/uploads/2022/10/wates-logo-jpg.jpg' },
+  { name: 'Camden Council', img: '/images/partners/camden.jpg' },
+  { name: 'Brent Council', img: '/images/partners/brent.jpg' },
+  { name: 'Osborne', img: '/images/partners/osborne.jpg' },
+  { name: 'Citywest Homes', img: '/images/partners/citywest-homes.jpg' },
+  { name: 'Wates', img: '/images/partners/wates.jpg' },
 ]
 
 const stats = [
@@ -116,7 +116,7 @@ export default function About() {
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden">
-                <img src="https://jhdbuilders.com/wp-content/uploads/2024/06/meet-brockley-the-dog-jhd-builders-mascot.png" alt="JHD Builders team" className="w-full h-full object-cover" />
+                <img src="/images/brockley-mascot.png" alt="JHD Builders team" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-5 -right-5 bg-primary p-5 rounded-xl shadow-2xl">
                 <div className="text-4xl font-bold text-white font-condensed">30+</div>
