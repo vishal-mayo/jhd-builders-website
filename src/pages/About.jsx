@@ -230,8 +230,8 @@ export default function About() {
           <div className="flex flex-wrap justify-center gap-4 lg:gap-8">
             {PARTNERS.map((p, i) => (
               <motion.div key={p.name} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.35, delay: i * 0.07 }}>
-                <motion.div className="h-14 w-28 bg-white/90 rounded-lg px-3 py-2 flex items-center justify-center cursor-default"
-                  whileHover={{ y: -2, backgroundColor: 'rgba(255,255,255,1)' }} transition={{ duration: 0.2 }}>
+                <motion.div className="h-20 w-36 bg-white rounded-lg px-4 py-3 flex items-center justify-center cursor-default shadow-sm"
+                  whileHover={{ y: -2, boxShadow: '0 4px 12px rgba(0,0,0,0.15)' }} transition={{ duration: 0.2 }}>
                   <img src={p.img} alt={p.name} className="max-w-full max-h-full object-contain" loading="lazy" />
                 </motion.div>
               </motion.div>
