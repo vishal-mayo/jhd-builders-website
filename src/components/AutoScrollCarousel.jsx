@@ -88,7 +88,11 @@ export default function AutoScrollCarousel({ children, className = '', gap = 16,
       isPausedRef.current = false;
     };
 
-
+    const handleMouseLeave = () => {
+      setIsDragging(false);
+      container.style.cursor = 'grab';
+      isPausedRef.current = false;
+    };
 
     container.addEventListener('mousedown', handleMouseDown);
     container.addEventListener('mouseleave', handleMouseLeave);
@@ -104,7 +108,6 @@ export default function AutoScrollCarousel({ children, className = '', gap = 16,
       container.removeEventListener('mouseleave', handleMouseLeave);
       container.removeEventListener('mouseup', handleMouseUp);
       container.removeEventListener('mousemove', handleMouseMove);
-  
       container.removeEventListener('touchstart', handleTouchStart);
       container.removeEventListener('touchmove', handleTouchMove);
       container.removeEventListener('touchend', handleTouchEnd);
