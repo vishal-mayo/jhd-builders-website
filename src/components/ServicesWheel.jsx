@@ -13,7 +13,8 @@ export default function ServicesWheel({ selected, onSelect }) {
     <div>
       {/* Desktop Radial Wheel - Now visible on all screens */}
       <div className="block">
-        <div className="relative select-none mx-auto scale-[0.65] sm:scale-[0.85] md:scale-100 origin-center" style={{ width: 560, height: 560 }}>
+        <div className="relative select-none mx-auto flex justify-center" style={{ minHeight: 364 }}>
+          <div className="scale-[0.6] sm:scale-[0.75] md:scale-100 origin-top" style={{ width: 560, height: 560 }}>
           <svg className="absolute inset-0 pointer-events-none" width="560" height="560">
             {SERVICES.map((s, i) => {
               const { a } = nodePos(i)
@@ -72,6 +73,7 @@ export default function ServicesWheel({ selected, onSelect }) {
               </motion.button>
             )
           })}
+          </div>
         </div>
       </div>
 
