@@ -111,7 +111,7 @@ export default function About() {
               <p className="text-grey-text text-lg leading-relaxed">Our dedicated and skilled workforce gives us the confidence to cope with the many needs of our clients. We understand that efficiency in time and cost is the major concern — and with our 30 years of experience, we can help ease those concerns.</p>
               <p className="text-grey-text text-lg leading-relaxed">We aim to deliver above and beyond expectations every time. Our commitment to quality and customer satisfaction has made us a trusted partner for local authorities and private clients alike.</p>
               <div className="pt-2">
-                <Link to="/services" className="btn-codepen"><svg><rect x="0" y="0" width="200" height="56" /></svg>Our Services</Link>
+                <Link to="/services" className="btn-codepen"><svg><rect x="0" y="0" width="240" height="56" /></svg>Our Services</Link>
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="relative">
@@ -248,8 +248,8 @@ export default function About() {
             <h2 className="font-condensed text-4xl lg:text-5xl font-bold text-white mb-6 uppercase">Ready to Start Your Project?</h2>
             <p className="text-grey-text text-lg mb-8">Contact us today to discuss your requirements with our experienced team.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="btn-codepen-white"><svg><rect x="0" y="0" width="200" height="56" /></svg>Contact Us</Link>
-              <a href="tel:02084463447" className="btn-codepen"><svg><rect x="0" y="0" width="200" height="56" /></svg>Call Now</a>
+              <Link to="/contact" className="btn-codepen-white"><svg><rect x="0" y="0" width="240" height="56" /></svg>Contact Us</Link>
+              <a href="tel:02084463447" className="btn-codepen"><svg><rect x="0" y="0" width="240" height="56" /></svg>Call Now</a>
             </div>
           </div>
         </div>

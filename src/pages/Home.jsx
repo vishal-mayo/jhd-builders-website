@@ -97,8 +97,8 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-6 justify-center"
             >
-              <Link to="/contact" className="btn-codepen"><svg><rect x="0" y="0" width="200" height="56" /></svg>Contact Us</Link>
-              <Link to="/services" className="btn-codepen-white"><svg><rect x="0" y="0" width="200" height="56" /></svg>Our Services</Link>
+              <Link to="/contact" className="btn-codepen"><svg><rect x="0" y="0" width="240" height="56" /></svg>Contact Us</Link>
+              <Link to="/services" className="btn-codepen-white"><svg><rect x="0" y="0" width="240" height="56" /></svg>Our Services</Link>
             </motion.div>
           </div>
         </div>
@@ -148,7 +148,7 @@ export default function Home() {
                 <p>We aim to deliver above and beyond expectations. Our team are highly trained and take pride in their work, ensuring every project is completed to the highest standard.</p>
               </div>
               <div className="pt-2">
-                <Link to="/about" className="btn-codepen"><svg><rect x="0" y="0" width="200" height="56" /></svg>Learn More</Link>
+                <Link to="/about" className="btn-codepen"><svg><rect x="0" y="0" width="240" height="56" /></svg>Learn More</Link>
               </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="relative">
@@ -236,7 +236,7 @@ export default function Home() {
                       ))}
                     </ul>
                     <div className="mt-6 pt-6 border-t border-grey/20">
-                      <Link to="/services" className="btn-codepen"><svg><rect x="0" y="0" width="200" height="56" /></svg>Browse All Services</Link>
+                      <Link to="/services" className="btn-codepen"><svg><rect x="0" y="0" width="240" height="56" /></svg>Browse All Services</Link>
                     </div>
                   </motion.div>
                 )}
@@ -337,7 +337,7 @@ export default function Home() {
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <h2 className="font-condensed text-3xl lg:text-4xl font-bold text-white mb-6 uppercase">Ready to Start Your Project?</h2>
             <p className="text-grey-text text-lg mb-8 max-w-2xl mx-auto">Contact us today to discuss your project with a member of our team.</p>
-            <Link to="/contact" className="btn-codepen"><svg><rect x="0" y="0" width="200" height="56" /></svg>Get Free Quote</Link>
+            <Link to="/contact" className="btn-codepen"><svg><rect x="0" y="0" width="240" height="56" /></svg>Get Free Quote</Link>
           </motion.div>
         </div>
       </section>

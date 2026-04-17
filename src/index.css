@@ -17,9 +17,12 @@
   /* CodePen btn-1 Style - Green border */
   .btn-codepen {
     @apply relative inline-block text-center uppercase tracking-wider text-primary font-normal;
-    width: 200px;
+    width: 240px;
     height: 56px;
     line-height: 56px;
+  }
+  .btn-codepen svg rect {
+    width: 240px;
   }
   .btn-codepen:hover {
     @apply font-bold;
