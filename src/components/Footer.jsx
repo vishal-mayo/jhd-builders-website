@@ -33,10 +33,13 @@ function Footer() {
           <div>
             <h4 className="font-condensed font-bold text-lg text-white mb-6">Services</h4>
             <ul className="space-y-3">
-              <li><Link to="/services" className="text-grey-text hover:text-primary transition-colors">External Works</Link></li>
-              <li><Link to="/services" className="text-grey-text hover:text-primary transition-colors">Refurbishments</Link></li>
-              <li><Link to="/services" className="text-grey-text hover:text-primary transition-colors">Relets</Link></li>
-              <li><Link to="/services" className="text-grey-text hover:text-primary transition-colors">Fencing</Link></li>
+              <li><Link to="/services/fire-door-installation" className="text-grey-text hover:text-primary transition-colors">Fire Door Installation</Link></li>
+              <li><Link to="/services/property-maintenance" className="text-grey-text hover:text-primary transition-colors">Property Maintenance</Link></li>
+              <li><Link to="/services/building-refurbishment" className="text-grey-text hover:text-primary transition-colors">Building Refurbishment</Link></li>
+              <li><Link to="/services/venetian-plastering" className="text-grey-text hover:text-primary transition-colors">Venetian Plastering</Link></li>
+              <li><Link to="/services/fire-risk-management" className="text-grey-text hover:text-primary transition-colors">Fire Risk Management</Link></li>
+              <li><Link to="/services/mould-maintenance" className="text-grey-text hover:text-primary transition-colors">Mould Maintenance</Link></li>
+              <li><Link to="/services/bike-canopies-shelters" className="text-grey-text hover:text-primary transition-colors">Bike Canopies & Shelters</Link></li>
             </ul>
           </div>
 
@@ -50,8 +53,12 @@ function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-grey/20 mt-12 pt-8 text-center text-grey-text text-sm">
+        <div className="border-t border-grey/20 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-grey-text text-sm">
           <p>&copy; {new Date().getFullYear()} JHD Builders Limited. All rights reserved.</p>
+          <div className="flex items-center gap-6">
+            <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link to="/cookies-policy" className="hover:text-primary transition-colors">Cookies Policy</Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -7,6 +7,8 @@ import Services from './pages/Services'
 import ServiceDetail from './pages/ServiceDetail'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import CookiesPolicy from './pages/CookiesPolicy'
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="services/:slug" element={<ServiceDetail />} />
           <Route path="projects" element={<Projects />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="cookies-policy" element={<CookiesPolicy />} />
         </Route>
       </Routes>
     </>
