@@ -147,10 +147,9 @@ export default function Home() {
                 <p>We are a building contractor who, over the past 30 years have worked with local authorities carrying out a large range of works. We are the main contractor for one of the UK&#39;s largest private landlords in London supporting them with external works, refurbishments, relets, fencing and disability adaptations.</p>
                 <p>We aim to deliver above and beyond expectations. Our team are highly trained and take pride in their work, ensuring every project is completed to the highest standard.</p>
               </div>
-              <Link to="/about" className="inline-flex items-center gap-2 text-primary font-semibold mt-6 hover:gap-4 transition-all uppercase tracking-wider">
-                Learn More
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-              </Link>
+              <div className="pt-2">
+                <Link to="/about" className="btn-codepen"><svg><rect x="0" y="0" width="200" height="56" /></svg>Learn More</Link>
+              </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="relative">
               <div className="aspect-[4/3] rounded-lg overflow-hidden">
@@ -237,9 +236,7 @@ export default function Home() {
                       ))}
                     </ul>
                     <div className="mt-6 pt-6 border-t border-grey/20">
-                      <Link to="/services" className="inline-flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-wider hover:gap-4 transition-all">
-                        Browse All Services <ArrowRight size={14} />
-                      </Link>
+                      <Link to="/services" className="btn-codepen"><svg><rect x="0" y="0" width="200" height="56" /></svg>Browse All Services</Link>
                     </div>
                   </motion.div>
                 )}
@@ -330,11 +327,6 @@ export default function Home() {
                 <p className="text-primary text-[11px] uppercase tracking-wide leading-tight">{member.role}</p>
               </motion.div>
             ))}
-          </div>
-          <div className="text-center mt-12">
-            <Link to="/about" className="inline-flex items-center gap-2 text-primary font-semibold text-sm uppercase tracking-wider hover:gap-4 transition-all">
-              Full team profiles on About <ArrowRight size={14} />
-            </Link>
           </div>
         </div>
       </section>
