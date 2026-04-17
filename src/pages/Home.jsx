@@ -103,7 +103,7 @@ export default function Home() {
           </div>
         </div>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+          className="absolute bottom-16 left-1/2 -translate-x-1/2 z-10">
           <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }}
             className="flex flex-col items-center cursor-pointer"
             onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}>
