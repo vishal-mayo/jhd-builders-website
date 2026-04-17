@@ -92,7 +92,7 @@ export default function About() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-darker overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-darker overflow-hidden px-6 sm:px-8">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
         <div className="container-custom px-4 relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-3xl">
@@ -129,7 +129,7 @@ export default function About() {
       </section>
 
       {/* Stats */}
-      <section className="py-20 bg-darker">
+      <section className="py-20 bg-darker px-6 sm:px-8">
         <div className="container-custom px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
@@ -209,7 +209,7 @@ export default function About() {
       </section>
 
       {/* Accreditations */}
-      <section className="py-14 bg-dark border-y border-grey/20 overflow-hidden">
+      <section className="py-14 bg-dark border-y border-grey/20 overflow-hidden px-6 sm:px-8">
         <div className="container-custom px-4">
           <div className="text-center mb-10">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">Accreditations &amp; Certifications</span>
@@ -264,7 +264,7 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-darker relative overflow-hidden">
+      <section className="py-20 bg-darker relative overflow-hidden px-6 sm:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent" />
         <div className="container-custom px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">

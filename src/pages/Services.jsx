@@ -7,7 +7,7 @@ export default function Services() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-darker overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-darker overflow-hidden px-6 sm:px-8">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent" />
         <div className="container-custom px-4 relative z-10">
           <motion.div
