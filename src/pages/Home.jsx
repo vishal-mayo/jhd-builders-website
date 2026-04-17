@@ -75,13 +75,15 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-[-50px] z-0">
-          <iframe
-            src="https://player.vimeo.com/video/945934477?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-            className="absolute w-full h-full"
-            style={{ minWidth: 'calc(100% + 100px)', minHeight: 'calc(100% + 100px)', objectFit: 'cover' }}
-            frameBorder="0" allow="autoplay; fullscreen" allowFullScreen
-          />
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 w-full h-full">
+            <iframe
+              src="https://player.vimeo.com/video/945934477?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+              className="w-full h-full"
+              style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}
+              frameBorder="0" allow="autoplay; fullscreen" allowFullScreen
+            />
+          </div>
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="container-custom px-4 sm:px-6 lg:px-8 relative z-10 pt-20">
@@ -118,8 +120,8 @@ export default function Home() {
       </section>
 
       {/* Marquee */}
-      <div className="relative -mt-6 z-20 overflow-hidden w-full">
-        <div className="bg-primary py-6 transform -rotate-1 origin-center w-[120%] -ml-[10%]">
+      <div className="relative -mt-6 z-20 overflow-hidden w-full max-w-[100vw]">
+        <div className="bg-primary py-4 transform -rotate-1 origin-left">
           <div className="whitespace-nowrap animate-marquee">
             <span className="text-white font-semibold text-lg uppercase tracking-wide mx-8">Visit Our London Showroom</span>
             <span className="text-white/60 mx-4">|</span>
